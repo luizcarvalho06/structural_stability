@@ -1,0 +1,30 @@
+---
+title: "Structural Stability"
+format: revealjs
+jupyter: python3
+---
+
+## Environment check
+
+```{python}
+import sys
+print(sys.executable)
+```
+
+## First plot
+
+```{python}
+#| echo: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 1, 200)
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(x, np.sin(np.pi * x))
+ax.set_xlabel("Normalized position")
+ax.set_ylabel("Normalized displacement")
+ax.grid(alpha=0.3)
+plt.show()
+```
