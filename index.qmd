@@ -1,30 +1,25 @@
 ---
-title: "Structural Stability"
-format: revealjs
-jupyter: python3
+title: "Teoria das Estruturas Aeroespaciais II"
+subtitle: "Slides e materiais da disciplina"
+format:
+  html:
+    theme: cosmo
+    toc: false
 ---
 
-## Environment check
+Bem-vindo à página de materiais da disciplina.
 
-```{python}
-import sys
-print(sys.executable)
-```
+Aqui estão disponíveis as apresentações utilizadas nas aulas.
 
-## First plot
+## Aulas
 
-```{python}
-#| echo: false
+| Tema | Material |
+|:-----|:---------|
+| Flambagem de cilindros | [Abrir apresentação](lectures/flambagem-cilindros/index.qmd) |
 
-import numpy as np
-import matplotlib.pyplot as plt
+## Professor
 
-x = np.linspace(0, 1, 200)
+Luiz Carvalho  
+Universidade Federal de Minas Gerais — UFMG
 
-fig, ax = plt.subplots(figsize=(8, 4))
-ax.plot(x, np.sin(np.pi * x))
-ax.set_xlabel("Normalized position")
-ax.set_ylabel("Normalized displacement")
-ax.grid(alpha=0.3)
-plt.show()
-```
+Contato: [luizcarvalho@demec.ufmg.br](mailto:luizcarvalho@demec.ufmg.br)

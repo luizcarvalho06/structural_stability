@@ -1,0 +1,13 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - lectures/**/index.qmd
+
+website:
+  title: "Teoria das Estruturas Aeroespaciais II"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Início

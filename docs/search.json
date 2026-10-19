@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#percurso-da-disciplina",
+    "href": "lectures/flambagem-cilindros/index.html#percurso-da-disciplina",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Percurso da disciplina",
+    "text": "Percurso da disciplina\n\n\n01 · Introdução\n\n\n02 · Métodos de otimização\n\n\n03 · Método dos elementos finitos\n\n\n04 · Método de densidades\n\n\n05 · Restrições de tensão e flambagem\n\n\n06 · Aplicações de otimização topológica\n\n\n07 · Projeto de estruturas"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#equação-de-donnell",
+    "href": "lectures/flambagem-cilindros/index.html#equação-de-donnell",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Equação de Donnell",
+    "text": "Equação de Donnell\n\n\nAssim como em placas planas, a equação diferencial para os deslocamentos \\(w(x, y)\\) pode ser obtida substituindo suas relações cinemáticas e constitutivas na equação de equilíbrio, mas incluindo agora uma curvatura \\(1/R\\) do painel.\nPara pequenas curvaturas relativas e considerando uma sistema de coordenadas \\(x\\) longitudinal ao cilindro e \\(y\\) ao longo da circunferência, podemos chegar na seguinte versão simplificada da equação de Donnell.\n\\[\nD \\nabla^4 w + \\frac{Et}{R^2} w + t \\left( \\sigma_x \\frac{\\partial^2 w}{\\partial x^2} + 2 \\tau \\frac{\\partial^2 w}{\\partial x \\partial y} + \\sigma_y\\frac{\\partial^2 w}{\\partial y^2} \\right) + p = 0\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#equação-de-donnell-1",
+    "href": "lectures/flambagem-cilindros/index.html#equação-de-donnell-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Equação de Donnell",
+    "text": "Equação de Donnell\n\n\nPodemos adotar condições de contorno como em placas nas suas bordas (para o caso bi-apoiado \\(w(0, y) = w(L, y) = 0\\) e \\(w_{xx}|_{(0, y)} = w_{xx}|_{(L, y)} = 0\\)), mas periódicas ao longo da circunferência (\\(w(x, 0) = w(x, 2\\pi R)\\)).\nPara um cilindro simplemente apoiado, uma solução por série de Fourier pode ser assumida para o deslocamento transversal \\(w(x, y)\\), assumindo um primeiro termo dominante da série, com \\(m\\) meias-ondas ao longo do comprimento e \\(n\\) meias-ondas ao longo da circunferência.\n\\[\nw(x, y) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right) \\cos\\left(\\frac{n y}{R}\\right)\n\\]\n\n\n\n\n\n\nPara uma deflexão simétrica em relação ao eixo longitudinal:\n\n\n\\[\nw(x) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right)\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c",
+    "href": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Coeficiente de flambagem \\(k_c\\)",
+    "text": "Coeficiente de flambagem \\(k_c\\)\nSubstituindo a solução assumida na equação de Donnell, podemos obter uma expressão para a carga crítica de flambagem do cilindro simplesmente apoiado, nos moldes da obtida para placas:\n\\[\n\\sigma_{cr} = \\frac{k_c \\pi^2 E}{12(1 - \\nu^2)} \\left(\\frac{t}{L}\\right)^2\n\\]\n\n\nO coeficiente de flambagem \\(k_c\\) depende do modo de flambagem, \\(m\\) e \\(n\\) (contido no termo \\(\\beta = n L / m \\pi r\\)) e de parâmetros geométricos do cilindro contidos no termo \\(Z\\) chamado parâmetro de Batdorf.\n\\[\nk_c = \\frac{(m^2 + \\beta^2)^2}{m^2} + \\frac{12 Z^2m^2}{\\pi^4 (m^2 + \\beta^2)^2}\n\\]\n\\[\nZ = \\frac{L^2}{R t} \\sqrt{1 - \\nu^2}\n\\]\n\n\n\nPara o caso simplificado com deflexão axisimétrica, temos \\(n = 0\\) e \\(\\beta = 0\\), e o coeficiente de flambagem se reduz a:\n\\[\nk_c = m^2 + \\frac{12 Z^2}{\\pi^4 m^2}\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c-1",
+    "href": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Coeficiente de flambagem \\(k_c\\)",
+    "text": "Coeficiente de flambagem \\(k_c\\)\n\n(a)(b)"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c-2",
+    "href": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c-2",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Coeficiente de flambagem \\(k_c\\)",
+    "text": "Coeficiente de flambagem \\(k_c\\)\nAssim como para placas, o coeficiente de flambagem a ser utilizado deve ser o da curva de menor valor dentre as famílias observadas anteriormente, para o valor de \\(Z\\) do cilindro em questão, onde observa-se agora um comportamento linear para \\(k_c(Z)\\).\nO coeficiente de flambagem pode ser obtido a partir de um problema de otimização, minimizando a função \\(k_c(Z)\\) em relação ao modo de flambagem, \\(m\\) ou o termo completo \\((m^2 + \\beta^2)^2/m^2\\). Fazendo \\(\\partial k_c / \\partial m = 0\\) e substituindo na equação de \\(k_c\\), obtêm-se:\n\\[\nk_c = \\frac{4 \\sqrt{3}}{\\pi^2} Z \\approx 0.702 Z\n\\]\nEste desenvolvimento assume um comportamento continuo de \\(m\\), o que é uma aproximação razoável apenas para valores de \\(Z\\) suficientemente grandes, como observado na região linear da curva de \\(k_c(Z)\\) considerada a partir de \\(Z \\geq 2,85\\)."
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#flambagem-axial-envoltória-dos-modos",
+    "href": "lectures/flambagem-cilindros/index.html#flambagem-axial-envoltória-dos-modos",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Flambagem axial: envoltória dos modos",
+    "text": "Flambagem axial: envoltória dos modos"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#fator-de-knockdown",
+    "href": "lectures/flambagem-cilindros/index.html#fator-de-knockdown",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Fator de knockdown",
+    "text": "Fator de knockdown\n\n\nO modelo clássico considera uma casca perfeita. Para representar a redução da resistência observada experimentalmente, introduzimos um fator de knockdown, \\(\\gamma\\).\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica.\nNa curva de coeficientes, aplicamos a correção por meio de \\(k_{c,\\mathrm{corr}}=f(\\gamma Z)\\), sendo \\(k_{c,\\mathrm{teo}}=f(Z)\\).\n\n\n\n\nBhrunFator de knockdown"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#correções-semi-empíricas",
+    "href": "lectures/flambagem-cilindros/index.html#correções-semi-empíricas",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Correções semi-empíricas",
+    "text": "Correções semi-empíricas\n\nCorreção para R/t = 500Diferentes razões R/t"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "",
+    "text": "Bem-vindo à página de materiais da disciplina.\nAqui estão disponíveis as apresentações utilizadas nas aulas."
+  },
+  {
+    "objectID": "index.html#aulas",
+    "href": "index.html#aulas",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Aulas",
+    "text": "Aulas\n\n\n\nTema\nMaterial\n\n\n\n\nFlambagem de cilindros\nAbrir apresentação"
+  },
+  {
+    "objectID": "index.html#professor",
+    "href": "index.html#professor",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Professor",
+    "text": "Professor\nLuiz Carvalho\nUniversidade Federal de Minas Gerais — UFMG\nContato: luizcarvalho@demec.ufmg.br"
+  }
+]

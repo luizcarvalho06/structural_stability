@@ -1,0 +1,495 @@
+/*-- scss:defaults --*/
+
+/* =========================================================
+   1. PALETA E CORES DO TEMA
+   ========================================================= */
+
+$pal-dark:   #2a2a2a;
+$pal-blue:   #1f77b4;
+$pal-teal:   #59a89c;
+$pal-red:    #e02b35;
+$pal-gold:   #d4a236;
+$pal-violet: #a559aa;
+$pal-gray:   #cecece;
+$pal-light:  #cfe6f8;
+
+$body-bg:    #ebe5e0;
+$body-color: $pal-dark;
+
+$link-color:                 $pal-blue;
+$code-color:                 #444444;
+$presentation-heading-color: $pal-dark;
+$input-bg:                   $pal-light;
+
+/* Classes semânticas existentes */
+$theme-unav:   $pal-blue;
+$theme-red:    $pal-red;
+$theme-yellow: $pal-gold;
+$theme-green:  $pal-teal;
+
+/* =========================================================
+   2. TIPOGRAFIA
+   ========================================================= */
+
+$font-family-sans-serif:
+  "Figtree",
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-family-monospace:
+  "Fira Code",
+  "Courier New",
+  monospace;
+
+$presentation-heading-font:        "Figtree", sans-serif;
+$presentation-heading-font-weight: 600;
+
+$presentation-font-size-root: 26px;
+
+$presentation-h1-font-size: 2.0em;
+$presentation-h2-font-size: 2.0em;
+$presentation-h3-font-size: 1.6em;
+
+/* =========================================================
+   3. CONTROLES VISUAIS
+   ========================================================= */
+
+$slide-title-bg:    #cfe4ff;
+$slide-title-color: #003366;
+
+$figure-border-width: 4px;
+$figure-border-color: $pal-blue;
+$figure-radius:       6px;
+$figure-column-width: 95%;
+
+$code-font-size: 2em;
+
+$semester-done-opacity: 0.40;
+
+
+/*-- scss:rules --*/
+
+/* =========================================================
+   4. FONTES EXTERNAS
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+/* =========================================================
+   5. TEXTO E TÍTULOS DOS SLIDES
+   ========================================================= */
+
+.reveal .slides section {
+  p {
+    text-align: justify;
+
+    font-size: 1.2em;
+    font-weight: 500;
+
+    margin-top: 0.9em;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: 600;
+    text-align: left;
+
+    background-color: $slide-title-bg;
+    color: $slide-title-color;
+
+    padding: 0.4em 0.8em;
+    margin: 0 0 0.8em;
+
+    border-radius: 8px;
+  }
+
+  /* Bloco de texto com largura limitada */
+  .content-block {
+    max-width: 900px;
+    margin-left: 0;
+
+    p {
+      margin-top: 0.6em;
+      margin-bottom: 0.9em;
+    }
+  }
+
+  /* Legendas */
+  p.caption,
+  figcaption {
+    font-size: 1.0em;
+    font-weight: 300;
+    font-style: italic;
+
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   6. LISTAS E CLASSES AUXILIARES
+   ========================================================= */
+
+.reveal .slide ul {
+  list-style-type: "\25FC  ";
+}
+
+.reveal .slide li::marker {
+  color: $theme-unav;
+}
+
+.focus  { color: $theme-unav; }
+.red    { color: $theme-red; }
+.green  { color: $theme-green; }
+.yellow { color: $theme-yellow; }
+
+.justify {
+  text-align: justify !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+/* =========================================================
+   7. FIGURAS — PADRÃO GERAL
+   ========================================================= */
+
+.reveal .slides section {
+  /* Saída gráfica de blocos executáveis */
+  .cell-output-display {
+    width: 80%;
+    max-width: none;
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  /* Contêineres das figuras */
+  .quarto-figure,
+  figure {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  /* Remove margens extras ao redor das imagens */
+  .quarto-figure figure,
+  figure > p,
+  .cell-output-display > p {
+    margin: 0;
+  }
+
+  /* Imagens: mantém a largura solicitada no QMD */
+  img {
+    display: block;
+    box-sizing: border-box;
+
+    max-width: 100%;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: $figure-border-width solid $figure-border-color;
+    border-radius: $figure-radius;
+
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Pequena folga nas laterais de uma coluna */
+  .column img {
+    max-width: $figure-column-width;
+  }
+
+  /* Figura compacta sob demanda */
+  .fig-small img,
+  img.fig-small {
+    width: 60% !important;
+    max-width: 60% !important;
+    height: auto !important;
+  }
+}
+
+/* =========================================================
+   8. ABAS
+   ========================================================= */
+
+.reveal .slides section {
+  /*
+   Ajusta largura sem alterar o display dos painéis.
+   Isso preserva a ocultação das abas inativas.
+  */
+  .panel-tabset,
+  .panel-tabset .tab-content,
+  .panel-tabset .tab-pane,
+  .panel-tabset .cell {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+}
+
+.panel-tabset-tabby a {
+  color: $pal-blue;
+}
+
+/* =========================================================
+   9. CALLOUTS
+   ========================================================= */
+
+.callout {
+  .callout-header {
+    font-size: 1.5em;
+    font-weight: 600;
+
+    background-color: $pal-dark;
+    color: $pal-light;
+  }
+
+  .callout-body {
+    font-size: 1.2em !important;
+    font-weight: 500;
+  }
+
+  &.callout-style-default {
+    border-color: $pal-gold;
+    background-color: lighten($body-bg, 2%);
+    color: $pal-dark;
+  }
+
+  /* Dicas */
+  &.callout-tip.callout-style-default {
+    border-color: $pal-blue !important;
+    background-color: lighten($body-bg, 4%) !important;
+
+    .callout-header {
+      background-color: $pal-blue !important;
+      color: $pal-light !important;
+    }
+  }
+
+  /* Resultados importantes */
+  &.callout-important.callout-style-default {
+    border-color: $theme-unav;
+  }
+
+  /* Avisos e cuidados */
+  &.callout-warning.callout-style-default,
+  &.callout-caution.callout-style-default {
+    border-color: $theme-yellow;
+  }
+}
+
+/* =========================================================
+   10. CÓDIGO
+   ========================================================= */
+
+.reveal pre code {
+  font-size: $code-font-size !important;
+}
+
+/* Mantém visíveis as linhas não destacadas */
+.reveal .slides section .simp-code
+code.has-line-highlights > span:not(.highlight-line) {
+  opacity: 1 !important;
+}
+
+/* Colore também os tokens das linhas destacadas */
+.reveal .slides section .simp-code
+code > span.highlight-line,
+.reveal .slides section .simp-code
+code > span.highlight-line span {
+  color: $pal-blue !important;
+  font-weight: normal !important;
+  background-color: transparent !important;
+}
+
+/* =========================================================
+   11. LOGOTIPO
+   ========================================================= */
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+
+  height: 70px !important;
+
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+/* =========================================================
+   12. CAPA
+   ========================================================= */
+
+.reveal .slides section#title-slide {
+  text-align: center;
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Nome da disciplina */
+  h1.title {
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 1.12;
+
+    max-width: 1350px;
+    margin: 0 auto 42px;
+
+    color: $pal-dark;
+  }
+
+  /* Aula e tema */
+  p.subtitle {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    margin: 0 auto 70px;
+
+    color: $pal-blue;
+  }
+
+  /* Bloco de autores */
+  .quarto-title-authors {
+    justify-content: center;
+    margin: 0;
+  }
+
+  /* Professor */
+  .quarto-title-author-name {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    margin: 0 0 14px;
+  }
+
+  /* Instituição */
+  .institute,
+  .quarto-title-affiliation {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    margin: 0;
+  }
+
+  /* Semestre */
+  p.date {
+    font-size: 26px;
+    font-weight: 400;
+
+    margin: 48px 0 0;
+
+    color: #666666;
+  }
+}
+
+/* =========================================================
+   13. SUMÁRIO DO SEMESTRE
+   ========================================================= */
+
+.reveal .slides section.semester-map {
+  .semester-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+  }
+
+  /* Cartão padrão */
+  .semester-item {
+    box-sizing: border-box;
+
+    padding: 12px 24px;
+
+    border: 1px solid rgba($pal-dark, 0.16);
+    border-left: 6px solid $pal-gray;
+    border-radius: 8px;
+
+    background-color: rgba(255, 255, 255, 0.25);
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+
+      margin: 0;
+
+      color: $pal-dark;
+    }
+
+    p + p {
+      margin-top: 5px;
+    }
+  }
+
+  /* Título do cartão */
+  .semester-card-title {
+    display: block;
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.15;
+
+    margin: 0;
+
+    color: $pal-dark;
+  }
+
+  /* Conteúdo já abordado */
+  .semester-item.done {
+    opacity: $semester-done-opacity;
+
+    border-left-color: $pal-teal;
+    background-color: rgba($pal-teal, 0.06);
+  }
+
+  /* Aula atual */
+  .semester-item.current {
+    opacity: 1;
+
+    border-color: $pal-blue;
+    border-left-width: 8px;
+
+    background-color: $pal-light;
+
+    .semester-card-title {
+      color: $pal-blue;
+    }
+  }
+}
+
+/* =========================================================
+   14. AJUSTES ESPECÍFICOS DE SLIDES
+   ========================================================= */
+
+/* Slide com os gráficos de flambagem */
+.reveal .slides section.buckling-tabs h2 {
+  margin-bottom: 0.35em;
+}
