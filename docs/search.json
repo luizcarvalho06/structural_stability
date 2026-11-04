@@ -53,7 +53,7 @@
     "href": "lectures/flambagem-cilindros/index.html#fator-de-knockdown",
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Fator de knockdown",
-    "text": "Fator de knockdown\n\n\nO modelo clássico considera uma casca perfeita. Para representar a redução da resistência observada experimentalmente, introduzimos um fator de knockdown, \\(\\gamma\\).\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica.\nNa curva de coeficientes, aplicamos a correção por meio de \\(k_{c,\\mathrm{corr}}=f(\\gamma Z)\\), sendo \\(k_{c,\\mathrm{teo}}=f(Z)\\).\n\n\n\n\nBhrunFator de knockdown"
+    "text": "Fator de knockdown\n\n\nComparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a curva teórica tende a superestimar os coeficientes de flambagem.\nO modelo clássico considera uma casca perfeita. Para representar a redução da resistência observada experimentalmente, introduzimos um fator de knockdown, \\(\\gamma\\).\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica.\nNa curva de coeficientes, aplicamos a correção por meio de \\(k_{c,\\mathrm{corr}}=f(\\gamma Z)\\), sendo \\(k_{c,\\mathrm{teo}}=f(Z)\\).\n\n\n\n\nBhrunFator de knockdown"
   },
   {
     "objectID": "lectures/flambagem-cilindros/index.html#correções-semi-empíricas",
@@ -82,5 +82,47 @@
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Professor",
     "text": "Professor\nLuiz Carvalho\nUniversidade Federal de Minas Gerais — UFMG\nContato: luizcarvalho@demec.ufmg.br"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#geometria-e-padrões-de-flambagem",
+    "href": "lectures/flambagem-cilindros/index.html#geometria-e-padrões-de-flambagem",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Geometria e padrões de flambagem",
+    "text": "Geometria e padrões de flambagem\n\n\nPara pequenos valores de \\(Z\\) (short range): observa-se um comportamento semelhante ao de uma placa, com flambagem em meia-onda longitudinal (\\(m=1\\), \\(n=0\\)).\nPara cilindros com elevados valores de \\(Z\\) (long range): as deformações da parede podem assumir um padrão em diamante.\nNa região de transição a curvatura observam-se diferentes combinações de ondas longitudinais e circunferenciais.\nPara cilindros muito esbeltos, além da região de cilindros longos, pode ser observada flambagem primária, como coluna.\n\n\n\n\nNACA 3783Short range x long range"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#flambagem-axial-teoria-e-experimento",
+    "href": "lectures/flambagem-cilindros/index.html#flambagem-axial-teoria-e-experimento",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Flambagem axial: teoria e experimento",
+    "text": "Flambagem axial: teoria e experimento\n\n\nComparando a solução clássica com os ensaios, observa-se que as cargas de flambagem experimentais podem ser consideravelmente inferiores às previstas pela teoria linear, além de apresentarem dispersão entre os resultados.\nA solução obtida anteriormente representa a bifurcação de equilíbrio de um cilindro idealizado, com geometria perfeita, espessura uniforme e condições de apoio e carregamento prescritas.\nNos cilindros reais, essa resposta pode ser modificada por:\n\nImperfeições geométricas: ondulações, desvios de circularidade e variações de espessura.\nCondições de ensaio: restrições nas extremidades, desalinhamento e distribuição não uniforme da carga.\n\nA diferença não se explica apenas pela presença desses desvios, mas pela forte sensibilidade da resposta do cilindro às imperfeições.\n\n\n\n\nBruhnNACA 3783"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#divergência-dos-resultados-experimentais",
+    "href": "lectures/flambagem-cilindros/index.html#divergência-dos-resultados-experimentais",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Divergência dos resultados experimentais",
+    "text": "Divergência dos resultados experimentais\n\n\nComparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a curva teórica tende a superestimar os coeficientes de flambagem.\nObserva-se também que as condições de contorno tendem a afetar a resistência à flambagem apenas para baixos valores de \\(Z\\), com discrepâncias também reduzidas nesta região.\n\n\n\n\nBruhnNACA 3783"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#sensibilidade-às-imperfeições",
+    "href": "lectures/flambagem-cilindros/index.html#sensibilidade-às-imperfeições",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Sensibilidade às imperfeições",
+    "text": "Sensibilidade às imperfeições\nPara observar o efeito das imperfeições como proposto por Donnell e Wan, duas modificações principais são necessárias em relação à análise linear.\n\n\n1. As relações cinemáticas, entre deformações e deslocamentos, não devem mais suprimir os termos quadráticos como faziamos para pequenas deformações:\n\\[\n\\begin{aligned}\n\\varepsilon_{x0}\n&= \\frac{\\partial u}{\\partial x}\n+ \\frac{1}{2}\\left(\\frac{\\partial w}{\\partial x}\\right)^2,\\\\[0.4em]\n\\varepsilon_{y0}\n&= \\frac{\\partial v}{\\partial y}\n- \\frac{w}{R}\n+ \\frac{1}{2}\\left(\\frac{\\partial w}{\\partial y}\\right)^2,\\\\[0.4em]\n\\gamma_{xy0}\n&= \\frac{\\partial u}{\\partial y}\n+ \\frac{\\partial v}{\\partial x}\n+ \\frac{\\partial w}{\\partial x}\n  \\frac{\\partial w}{\\partial y}.\n\\end{aligned}\n\\]\n\n\n\n2. Introduzimos uma imperfeição geométrica inicial, distinta do deslocamento causado pela carga.\n\\[\nw_0(x,y)=\n\\sin\\left(\\frac{\\pi x}{a}\\right)\n\\sin\\left(\\frac{\\pi y}{a}\\right)\n\\]\nA deflexão total da superfície tem então contribuição da deformação causada pela carga e da imperfeição inicial, na forma:\n\\[\nw = w_0 + w_b.\n\\]\n\n\n\n\n\n\nA nova equação diferencial obtida sob estas considerações pode ser resolvida utilizando o método de Galerkin, fornecendo relações não lineares entre a carga axial e a deflexão lateral (similar ao observado para colunas com imperfeições)"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#divergência-dos-resultados-experimentais-1",
+    "href": "lectures/flambagem-cilindros/index.html#divergência-dos-resultados-experimentais-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Divergência dos resultados experimentais",
+    "text": "Divergência dos resultados experimentais\n\n\nDonnell (1934) reconhece a necessidade de um modelo não linear para a flambagem de cilindros, capaz de não apenas determinar uma carga de flambagem mas também sua evolução até a pós flambagem.\nVon Kármán e Tsien (1941) obtêm soluções não lineares considerando grandes deformações e utilizando melhores aproximações para a forma defletida dos cilindros.\nEm seu modelo, a distinção entre os modelos teóricos e experimentos se dava devido a possíveis saltos entre diferentes configurações de equilíbrio causados por vibrações ou perturbações.\nDonnell e Wan (1950) incorporam imperfeições geométricas iniciais e mostram que pequenos desvios podem reduzir significativamente a carga máxima suportada.\n\n\n\n\nCilindro perfeitoCilindro imperfeito"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#sensibilidade-às-imperfeições-caminhos-de-equilíbrio",
+    "href": "lectures/flambagem-cilindros/index.html#sensibilidade-às-imperfeições-caminhos-de-equilíbrio",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Sensibilidade às imperfeições: caminhos de equilíbrio",
+    "text": "Sensibilidade às imperfeições: caminhos de equilíbrio"
   }
 ]
