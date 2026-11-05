@@ -11,14 +11,14 @@
     "href": "lectures/flambagem-cilindros/index.html#equação-de-donnell",
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Equação de Donnell",
-    "text": "Equação de Donnell\n\n\nAssim como em placas planas, a equação diferencial para os deslocamentos \\(w(x, y)\\) pode ser obtida substituindo suas relações cinemáticas e constitutivas na equação de equilíbrio, mas incluindo agora uma curvatura \\(1/R\\) do painel.\nPara pequenas curvaturas relativas e considerando uma sistema de coordenadas \\(x\\) longitudinal ao cilindro e \\(y\\) ao longo da circunferência, podemos chegar na seguinte versão simplificada da equação de Donnell.\n\\[\nD \\nabla^4 w + \\frac{Et}{R^2} w + t \\left( \\sigma_x \\frac{\\partial^2 w}{\\partial x^2} + 2 \\tau \\frac{\\partial^2 w}{\\partial x \\partial y} + \\sigma_y\\frac{\\partial^2 w}{\\partial y^2} \\right) + p = 0\n\\]"
+    "text": "Equação de Donnell\n\n\nA partir de equilíbrio de forças no plano da casca (de maneira análoga à obtida para placas), podemos obter a equação de Donnell, que relaciona carregamentos externos ao deslocamento transversal \\(w(x,y)\\):\n\\[\nD\\nabla^8 w\n+\\frac{Et}{R^2}\\frac{\\partial^4 w}{\\partial x^4}\n+\\nabla^4\\left(\nN_x\\frac{\\partial^2 w}{\\partial x^2}\n+2N_{xy}\\frac{\\partial^2 w}{\\partial x\\,\\partial y}\n+N_y\\frac{\\partial^2 w}{\\partial y^2}\n\\right)=0.\n\\]\nPara apenas compressão axial e uniforme, temos \\(N_x=\\sigma_x t=\\text{constante}\\) e \\(N_y=N_{xy}=0\\), reduzindo a equação a:\n\\[\nD\\nabla^8 w\n+\\frac{Et}{R^2}\\frac{\\partial^4 w}{\\partial x^4}\n+\\sigma_x t\\,\\nabla^4\\left(\n\\frac{\\partial^2 w}{\\partial x^2}\n\\right)=0.\n\\]"
   },
   {
     "objectID": "lectures/flambagem-cilindros/index.html#equação-de-donnell-1",
     "href": "lectures/flambagem-cilindros/index.html#equação-de-donnell-1",
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Equação de Donnell",
-    "text": "Equação de Donnell\n\n\nPodemos adotar condições de contorno como em placas nas suas bordas (para o caso bi-apoiado \\(w(0, y) = w(L, y) = 0\\) e \\(w_{xx}|_{(0, y)} = w_{xx}|_{(L, y)} = 0\\)), mas periódicas ao longo da circunferência (\\(w(x, 0) = w(x, 2\\pi R)\\)).\nPara um cilindro simplemente apoiado, uma solução por série de Fourier pode ser assumida para o deslocamento transversal \\(w(x, y)\\), assumindo um primeiro termo dominante da série, com \\(m\\) meias-ondas ao longo do comprimento e \\(n\\) meias-ondas ao longo da circunferência.\n\\[\nw(x, y) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right) \\cos\\left(\\frac{n y}{R}\\right)\n\\]\n\n\n\n\n\n\nPara uma deflexão simétrica em relação ao eixo longitudinal:\n\n\n\\[\nw(x) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right)\n\\]"
+    "text": "Equação de Donnell\n\n\nA partir de equilíbrio de forças no plano da casca (de maneira análoga à obtida para placas), podemos obter a equação de Donnell, que relaciona carregamentos externos ao deslocamento transversal \\(w(x,y)\\):\n\\[\nD\\nabla^8 w\n+\\frac{Et}{R^2}\\frac{\\partial^4 w}{\\partial x^4}\n+\\nabla^4\\left(\nN_x\\frac{\\partial^2 w}{\\partial x^2}\n+2N_{xy}\\frac{\\partial^2 w}{\\partial x\\,\\partial y}\n+N_y\\frac{\\partial^2 w}{\\partial y^2}\n\\right)=0.\n\\]\nPara compressão exclusivamente axial e uniforme, temos \\(N_x=\\sigma_x t=\\text{constante}\\) e \\(N_y=N_{xy}=0\\). Assim, a equação se reduz a:\n\\[\n\\boxed{\nD\\nabla^8 w\n+\\frac{Et}{R^2}\\frac{\\partial^4 w}{\\partial x^4}\n+\\sigma_x t\\,\\nabla^4\\left(\n\\frac{\\partial^2 w}{\\partial x^2}\n\\right)=0.\n}\n\\]\nAs tensões e os esforços normais são considerados positivos em compressão. Os operadores são definidos por:\n\\[\n\\nabla^4=\n\\left(\n\\frac{\\partial^2}{\\partial x^2}\n+\\frac{\\partial^2}{\\partial y^2}\n\\right)^2,\n\\qquad\n\\nabla^8=\\nabla^4\\nabla^4.\n\\]\n\n\n\n\n\n\nNote\n\n\nA simplificação restringe o carregamento, não o modo: o deslocamento ainda pode variar nas direções longitudinal e circunferencial."
   },
   {
     "objectID": "lectures/flambagem-cilindros/index.html#coeficiente-de-flambagem-k_c",
@@ -53,7 +53,7 @@
     "href": "lectures/flambagem-cilindros/index.html#fator-de-knockdown",
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Fator de knockdown",
-    "text": "Fator de knockdown\n\n\nComparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a curva teórica tende a superestimar os coeficientes de flambagem.\nO modelo clássico considera uma casca perfeita. Para representar a redução da resistência observada experimentalmente, introduzimos um fator de knockdown, \\(\\gamma\\).\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica.\nNa curva de coeficientes, aplicamos a correção por meio de \\(k_{c,\\mathrm{corr}}=f(\\gamma Z)\\), sendo \\(k_{c,\\mathrm{teo}}=f(Z)\\).\n\n\n\n\nBhrunFator de knockdown"
+    "text": "Fator de knockdown\n\n\nSoluções precisas para flambagem de cilindros e cascas finas então demandam custosa análise não linear, com aprofundada avaliação de imperfeições. Para simplificar a análise, podemos utilizar correções empíricas para reduzir os coeficientes de flambagem obtidos teoricamente.\nAs correções propostas deslocam a curva de coeficientes de flambagem multiplicando o parâmetro \\(Z\\) por fator de knockdown, \\(\\gamma\\). Mantendo seu comportamento qualitativo mas fazendo correções razoavelmente conservadoras para a carga crítica de flambagem.\nNa curva de coeficientes, aplicamos a correção por meio de \\(k_{c,\\mathrm{corr}}=f(\\gamma Z)\\), sendo \\(k_{c,\\mathrm{teo}}=f(Z)\\). Para a compressão axial, adotamos a expressão empírica:"
   },
   {
     "objectID": "lectures/flambagem-cilindros/index.html#correções-semi-empíricas",
@@ -102,7 +102,7 @@
     "href": "lectures/flambagem-cilindros/index.html#divergência-dos-resultados-experimentais",
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Divergência dos resultados experimentais",
-    "text": "Divergência dos resultados experimentais\n\n\nComparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a curva teórica tende a superestimar os coeficientes de flambagem.\nObserva-se também que as condições de contorno tendem a afetar a resistência à flambagem apenas para baixos valores de \\(Z\\), com discrepâncias também reduzidas nesta região.\n\n\n\n\nBruhnNACA 3783"
+    "text": "Divergência dos resultados experimentais\n\n\nObserva-se que, para cilindros longos, as condições de contorno apresentam pouca influência na carga crítica de flambagem.\nNo entanto, para cilindros curtos, seu comportamento se aproxima daquele de placas planas com grande influência das diferentes condições nas bordas.\nComparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a curva teórica tende a superestimar os coeficientes de flambagem.\n\n\n\n\nBruhnNACA 3783"
   },
   {
     "objectID": "lectures/flambagem-cilindros/index.html#sensibilidade-às-imperfeições",
@@ -124,5 +124,47 @@
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Sensibilidade às imperfeições: caminhos de equilíbrio",
     "text": "Sensibilidade às imperfeições: caminhos de equilíbrio"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#flambagem-de-cilindros-e-cascas-finas",
+    "href": "lectures/flambagem-cilindros/index.html#flambagem-de-cilindros-e-cascas-finas",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Flambagem de cilindros e cascas finas",
+    "text": "Flambagem de cilindros e cascas finas\n\n\n01 · Teoria linear de flambagem\n\n\n02 · Limitações\n\n\n03 · Sensibilidade a imperfeições\n\n\n04 · Correções semi-empíricas\n\n\n05 · Flambagem de cascas\n\n\n06 · Carregamentos combinados\n\n\n07 · Estabilidade de estruturas semi-monocoque"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#equação-de-donnell-2",
+    "href": "lectures/flambagem-cilindros/index.html#equação-de-donnell-2",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Equação de Donnell",
+    "text": "Equação de Donnell\n\n\n\\[\nD \\nabla^4 w + \\frac{Et}{R^2} w + t \\left( \\sigma_x \\frac{\\partial^2 w}{\\partial x^2} + 2 \\tau \\frac{\\partial^2 w}{\\partial x \\partial y} + \\sigma_y\\frac{\\partial^2 w}{\\partial y^2} \\right) + p = 0\n\\]\nPodemos adotar condições de contorno como em placas nas suas bordas (para o caso bi-apoiado \\(w(0, y) = w(L, y) = 0\\) e \\(w_{xx}|_{(0, y)} = w_{xx}|_{(L, y)} = 0\\)), mas periódicas ao longo da circunferência (\\(w(x, 0) = w(x, 2\\pi R)\\)).\nPara um cilindro simplemente apoiado, uma solução por série de Fourier pode ser assumida para o deslocamento transversal \\(w(x, y)\\), assumindo um primeiro termo dominante da série, com \\(m\\) meias-ondas ao longo do comprimento e \\(n\\) meias-ondas ao longo da circunferência.\n\\[\nw(x, y) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right) \\cos\\left(\\frac{n y}{R}\\right)\n\\]\n\n\n\n\n\n\nPara uma deflexão simétrica em relação ao eixo longitudinal:\n\n\n\\[\nw(x) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right)\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#flambagems-de-clindros",
+    "href": "lectures/flambagem-cilindros/index.html#flambagems-de-clindros",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Flambagems de clindros",
+    "text": "Flambagems de clindros\n\n\nAo estudar flambagem de placas, partimos de uma equação diferencial que relaciona as tensões no plano da placa ao deslocamento transversal \\(w(x,y)\\):\n\\[\nD\\nabla^4 w  \n+ N_x \\frac{\\partial^2 w}{\\partial x^2}\n+ N_{xy}\\frac{\\partial^2 w}{\\partial x\\,\\partial y}\n+ N_y \\frac{\\partial^2 w}{\\partial y^2}\n= 0\n\\]\nPara cilindros e cascas finas a equação diferencial torna-se levemente mais complexa ao incluir os efeitos da curvatura da superfície nas relações cinemáticas.\nNa aproximação linear de Donnell, adotamos um sistema de coordenadas \\(x\\) na direção longitudinale \\(y\\) ao longo da circunferência e \\(w\\) positivo para o centro de curvatura onde apenas a deformação circunferencial é afetada pela curvatura nestas condições:\n\\[\n\\varepsilon_{x0}=\\frac{\\partial u}{\\partial x},\n\\qquad\n\\varepsilon_{y0}=\\frac{\\partial v}{\\partial y}-\\frac{w}{R},\n\\qquad\n\\gamma_{xy0}=\\frac{\\partial u}{\\partial y}\n+\\frac{\\partial v}{\\partial x}.\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#solução-para-cilindro-simplesmente-apoiado",
+    "href": "lectures/flambagem-cilindros/index.html#solução-para-cilindro-simplesmente-apoiado",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Solução para cilindro simplesmente apoiado",
+    "text": "Solução para cilindro simplesmente apoiado\n\n\nPodemos adotar condições de contorno como em placas nas suas bordas (para o caso bi-apoiado \\(w(0, y) = w(L, y) = 0\\) e \\(w_{xx}|_{(0, y)} = w_{xx}|_{(L, y)} = 0\\)), mas periódicas ao longo da circunferência (\\(w(x, 0) = w(x, 2\\pi R)\\)).\nPara um cilindro simplemente apoiado, uma solução por série de Fourier pode ser assumida para o deslocamento transversal \\(w(x, y)\\), assumindo um primeiro termo dominante da série, com \\(m\\) meias-ondas ao longo do comprimento e \\(n\\) meias-ondas ao longo da circunferência.\n\\[\nw(x, y) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right) \\cos\\left(\\frac{n y}{R}\\right)\n\\]\n\n\n\n\n\n\nPara uma deflexão simétrica em relação ao eixo longitudinal:\n\n\n\\[\nw(x) = w_0 \\sin\\left(\\frac{m \\pi x}{L}\\right)\n\\]"
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#fator-de-knockdown-2",
+    "href": "lectures/flambagem-cilindros/index.html#fator-de-knockdown-2",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Fator de knockdown",
+    "text": "Fator de knockdown\n\n\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica."
+  },
+  {
+    "objectID": "lectures/flambagem-cilindros/index.html#fator-de-knockdown-1",
+    "href": "lectures/flambagem-cilindros/index.html#fator-de-knockdown-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Fator de knockdown",
+    "text": "Fator de knockdown\n\n\nPara a compressão axial, adotamos a expressão empírica:\n\\[\n\\gamma=1-0{,}901\\left(1-e^{-\\phi}\\right)\n\\]\ncom\n\\[\n\\phi=\\frac{1}{16}\\sqrt{\\frac{R}{t}},\n\\qquad \\frac{R}{t}&lt;1500.\n\\]\nQuanto maior a razão \\(R/t\\), menor o fator \\(\\gamma\\) e maior a redução prevista em relação à solução clássica.\nRessalta-se que esta abordagem empírica não é capaz de considerar as interações entre a flambagem de cascas e de colunas, não apresentando então resultados conservadores para cilindros muitos esbeltos, com \\(R/t&gt;1500\\)."
   }
 ]

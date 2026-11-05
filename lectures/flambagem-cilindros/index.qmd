@@ -1,37 +1,37 @@
 ---
 title: "Teoria das Estruturas Aeroespaciais II"
-subtitle: "Flambagem de cilindros"
+subtitle: "Flambagem de cilindros e cascas finas"
 ---
 
-## Percurso da disciplina {.semester-map}
+## Flambagem de cilindros e cascas finas {.semester-map}
 
 :::::::::: semester-grid
 ::: {.semester-item .done}
-[01 · Introdução]{.semester-card-title}
+[01 · Teoria linear de flambagem]{.semester-card-title}
 :::
 
 ::: {.semester-item .done}
-[02 · Métodos de otimização]{.semester-card-title}
+[02 · Limitações]{.semester-card-title}
 :::
 
 ::: {.semester-item .done}
-[03 · Método dos elementos finitos]{.semester-card-title}
+[03 · Sensibilidade a imperfeições]{.semester-card-title}
 :::
 
-::: {.semester-item .current}
-[04 · Método de densidades]{.semester-card-title}
-:::
-
-::: semester-item
-[05 · Restrições de tensão e flambagem]{.semester-card-title}
+::: {.semester-item .done}
+[04 · Correções semi-empíricas]{.semester-card-title}
 :::
 
 ::: semester-item
-[06 · Aplicações de otimização topológica]{.semester-card-title}
+[05 · Flambagem de cascas]{.semester-card-title}
 :::
 
 ::: semester-item
-[07 · Projeto de estruturas]{.semester-card-title}
+[06 · Carregamentos combinados]{.semester-card-title}
+:::
+
+::: semester-item
+[07 · Estabilidade de estruturas semi-monocoque]{.semester-card-title}
 :::
 ::::::::::
 
@@ -59,22 +59,79 @@ GRAY = "#cecece"
 ```
 
 <!-- ============================================================================================================================== -->
-
+<!-- ============================================================================================================================== -->
 <!-- ============================================================================================================================== -->
 
+## Flambagems de clindros
+
+:::::: columns
+::: {.column width="70%"}
+
+Ao estudar flambagem de placas, partimos de uma equação diferencial que relaciona as tensões no plano da placa ao deslocamento transversal $w(x,y)$:
+
+$$
+D\nabla^4 w  
++ N_x \frac{\partial^2 w}{\partial x^2}
++ N_{xy}\frac{\partial^2 w}{\partial x\,\partial y}
++ N_y \frac{\partial^2 w}{\partial y^2}
+ = 0
+$$
+
+Para cilindros e cascas finas a equação diferencial torna-se levemente mais complexa ao incluir os efeitos da curvatura da superfície nas relações cinemáticas.
+
+Na aproximação linear de Donnell, adotamos um sistema de coordenadas $x$ na direção longitudinale $y$ ao longo da circunferência
+e $w$ positivo para o centro de curvatura onde apenas a deformação circunferencial é afetada pela curvatura nestas condições:
+
+$$
+\varepsilon_{x0}=\frac{\partial u}{\partial x},
+\qquad
+\varepsilon_{y0}=\frac{\partial v}{\partial y}-\frac{w}{R},
+\qquad
+\gamma_{xy0}=\frac{\partial u}{\partial y}
++\frac{\partial v}{\partial x}.
+$$
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+![](figuras/coordinates.png){fig-align="center" width="100%"}
+:::
+::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
 <!-- ============================================================================================================================== -->
 
 ## Equação de Donnell
 
 :::::: columns
 ::: {.column width="70%"}
-Assim como em placas planas, a [equação diferencial para os deslocamentos $w(x, y)$]{.focus} pode ser obtida substituindo suas relações cinemáticas e constitutivas na equação de equilíbrio, mas incluindo agora uma curvatura $1/R$ do painel.
 
-Para pequenas curvaturas relativas e considerando uma sistema de coordenadas $x$ longitudinal ao cilindro e $y$ ao longo da circunferência, podemos chegar na seguinte versão simplificada da equação de Donnell.
+A partir de equilíbrio de forças no plano da casca (de maneira análoga à obtida para placas), podemos obter a [equação de Donnell]{.focus}, que relaciona carregamentos externos ao deslocamento transversal $w(x,y)$:
 
 $$
-D \nabla^4 w + \frac{Et}{R^2} w + t \left( \sigma_x \frac{\partial^2 w}{\partial x^2} + 2 \tau \frac{\partial^2 w}{\partial x \partial y} + \sigma_y\frac{\partial^2 w}{\partial y^2} \right) + p = 0
+D\nabla^8 w
++\frac{Et}{R^2}\frac{\partial^4 w}{\partial x^4}
++\nabla^4\left(
+N_x\frac{\partial^2 w}{\partial x^2}
++2N_{xy}\frac{\partial^2 w}{\partial x\,\partial y}
++N_y\frac{\partial^2 w}{\partial y^2}
+\right)=0.
 $$
+
+Para apenas [compressão axial e uniforme]{.focus}, temos $N_x=\sigma_x t=\text{constante}$ e $N_y=N_{xy}=0$, reduzindo a equação a:
+
+$$
+D\nabla^8 w
++\frac{Et}{R^2}\frac{\partial^4 w}{\partial x^4}
++\sigma_x t\,\nabla^4\left(
+\frac{\partial^2 w}{\partial x^2}
+\right)=0.
+$$
+
 :::
 
 ::: {.column width="5%"}
@@ -91,10 +148,11 @@ $$
 
 <!-- ============================================================================================================================== -->
 
-## Equação de Donnell
+## Solução para cilindro simplesmente apoiado
 
 ::::::: columns
 :::: {.column width="70%"}
+
 Podemos adotar condições de contorno como em placas nas suas bordas ([para o caso bi-apoiado $w(0, y) = w(L, y) = 0$ e $w_{xx}|_{(0, y)} = w_{xx}|_{(L, y)} = 0$]{.focus}), mas periódicas ao longo da circunferência ([$w(x, 0) = w(x, 2\pi R)$]{.focus}).
 
 Para um cilindro simplemente apoiado, uma solução por série de Fourier pode ser assumida para o deslocamento transversal $w(x, y)$, assumindo um primeiro termo dominante da série, com $m$ meias-ondas ao longo do comprimento e $n$ meias-ondas ao longo da circunferência.
@@ -713,9 +771,12 @@ Para [cilindros muito esbeltos, além da região de cilindros longos,]{.focus} p
 ::::::: columns
 ::: {.column width="48%"}
 
+Observa-se que, para cilindros longos, as condições de contorno apresentam pouca influência na carga crítica de flambagem.
+
+No entanto, para cilindros curtos, seu comportamento se aproxima daquele de placas planas com grande influência das diferentes condições nas bordas.
+
 Comparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a [curva teórica tende a superestimar os coeficientes de flambagem.]{.focus}
 
-Observa-se também que as condições de contorno tendem a afetar a resistência à flambagem apenas para baixos valores de $Z$, com discrepâncias também reduzidas nesta região.
 :::
 
 ::: {.column width="4%"}
@@ -1445,10 +1506,34 @@ def plot_corrected_envelopes(rt_values):
 ::::::: columns
 ::: {.column width="48%"}
 
-Comparando os resultados analíticos obtidos anteriormente com dados experimentais, nota-se que a [curva teórica tende a superestimar os coeficientes de flambagem.]{.focus}
+Soluções precisas para flambagem de cilindros e cascas finas então demandam custosa análise não linear, com aprofundada avaliação de imperfeições. Para simplificar a análise, podemos utilizar [correções empíricas]{.focus} para reduzir os coeficientes de flambagem obtidos teoricamente.
+
+As correções propostas deslocam a curva de coeficientes de flambagem multiplicando o parâmetro $Z$ por [fator de knockdown]{.focus}, $\gamma$. Mantendo seu comportamento qualitativo mas fazendo correções razoavelmente conservadoras para a carga crítica de flambagem.
+
+Na curva de coeficientes, aplicamos a correção por meio de [$k_{c,\mathrm{corr}}=f(\gamma Z)$]{.focus}, sendo $k_{c,\mathrm{teo}}=f(Z)$.
+Para a compressão axial, adotamos a expressão empírica:
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/bhrun.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+<!-- ===================== Slide 2 ===================== -->
 
 
-O modelo clássico considera uma casca perfeita. Para representar a redução da resistência observada experimentalmente, introduzimos um [fator de knockdown]{.focus}, $\gamma$.
+<!-- ===================== Slide 1 ===================== -->
+
+## Fator de knockdown {.knockdown-slide}
+
+::::::: columns
+::: {.column width="48%"}
 
 Para a compressão axial, adotamos a expressão empírica:
 
@@ -1465,19 +1550,14 @@ $$
 
 Quanto maior a razão $R/t$, menor o fator $\gamma$ e maior a redução prevista em relação à solução clássica.
 
-Na curva de coeficientes, aplicamos a correção por meio de [$k_{c,\mathrm{corr}}=f(\gamma Z)$]{.focus}, sendo $k_{c,\mathrm{teo}}=f(Z)$.
+Ressalta-se que esta abordagem empírica não é capaz de considerar as interações entre a flambagem de cascas e de colunas, não apresentando então resultados conservadores para cilindros muitos esbeltos, com $R/t>1500$.
+
 :::
 
 ::: {.column width="4%"}
 :::
 
 :::: {.column width="48%"}
-::: panel-tabset
-### Bhrun
-
-![](figuras/bhrun.png){fig-align="center" width="100%"}
-
-### Fator de *knockdown*
 
 ```{python}
 #| echo: false
@@ -1529,11 +1609,10 @@ with plt.rc_context(PLOT_STYLE):
     plt.show()
     plt.close(fig)
 ```
-:::
 ::::
 :::::::
 
-<!-- ===================== Slide 2 ===================== -->
+
 
 ## Correções semi-empíricas
 
