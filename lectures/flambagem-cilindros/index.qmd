@@ -67,7 +67,7 @@ GRAY = "#cecece"
 :::::: columns
 ::: {.column width="70%"}
 
-Ao estudar flambagem de placas, partimos de uma equação diferencial que relaciona as tensões no plano da placa ao deslocamento transversal $w(x,y)$:
+Ao estudar [flambagem de placas]{.focus}, partimos de uma equação diferencial que relaciona as tensões no plano da placa ao deslocamento transversal $w(x,y)$:
 
 $$
 D\nabla^4 w  
@@ -77,7 +77,7 @@ D\nabla^4 w
  = 0
 $$
 
-Para cilindros e cascas finas a equação diferencial torna-se levemente mais complexa ao incluir os efeitos da curvatura da superfície nas relações cinemáticas.
+Para [cilindros e cascas finas]{.focus} a equação diferencial torna-se *levemente* mais complexa ao incluir os efeitos da curvatura da superfície nas relações cinemáticas.
 
 Na aproximação linear de Donnell, adotamos um sistema de coordenadas $x$ na direção longitudinale $y$ ao longo da circunferência
 e $w$ positivo para o centro de curvatura onde apenas a deformação circunferencial é afetada pela curvatura nestas condições:
