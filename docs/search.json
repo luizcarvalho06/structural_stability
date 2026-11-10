@@ -215,5 +215,47 @@
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Professor",
     "text": "Professor\nLuiz Carvalho\nUniversidade Federal de Minas Gerais — UFMG\nContato: luizcarvalho@demec.ufmg.br"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Campo de tração diagonal",
+    "text": "Campo de tração diagonal\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#introdução",
+    "href": "lectures/diagonal_tension/index.html#introdução",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Introdução",
+    "text": "Introdução\n\n\nVigas como as longarinas de aeronaves sãop normalmente constituídas por flanges (mesas) conectadas por uma alma de baixa espessura reforçada verticalmente a intervalos.\nNas vigas com alma resistente à flambagem, as tensões presentes neste elemento devem permanecer abaixo de valores admissíveis para este critério.\nNeste caso, as cargas admissíveis podem ser elevadas a partir de duas principais variações no projeto: elevar a espessura da alma ou reduzir as dimensões dos painéis, com a inclusão de mais reforçadores verticais."
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem",
+    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Projeto de vigas resistentes à flambagem",
+    "text": "Projeto de vigas resistentes à flambagem\n\n\nÉ necessário garantir que as tensões presentes não superem seus valores admissíveis"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#section",
+    "href": "lectures/diagonal_tension/index.html#section",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "…",
+    "text": "…"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tração diagonal",
+    "text": "Tração diagonal\n\n\nEm alguns projetos de vigas, ou elementos de revestimento reforçados, considera-se que a alma, ou revestimento de baixa espessura, possa sofrer flambagem assumindo um estado de tensão chamado de tração diagonal.\nNo entanto, suportada por flanges, reforçadores ou cavernas estes elementos flambados ainda oferecem resistência ao carregamento.\nNeste estado, os elementos reforçadores sofrem então cargas adicionais, de modo a acomodar a flambagem da alma."
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
+    "href": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tração diagonal pura: Teoria de Wagner",
+    "text": "Tração diagonal pura: Teoria de Wagner\n\n\nEm um estado de tração diagonal pura, consideramos uma total perda de capacidade resistiva da alma perpendicular às meias ondas de flambagem (diagonal secundária).\nConsideramos um caso idealizado, onde as flanges suportam todo o carregamento de flexão enquanto alma suporta os esforços cisalhantes.\nSob estas considerações, uma tensão de cisalhamento \\(\\tau\\) uniforme se distribui sobre a alma de espessura \\(t\\) e contida entre flanges espaçadas em \\(d\\).\n\\[\n\\tau = \\frac{S}{t d}\n\\]"
   }
 ]

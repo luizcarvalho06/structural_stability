@@ -1,0 +1,156 @@
+---
+title: "Teoria das Estruturas Aeroespaciais II"
+subtitle: "Flambagem de cilindros e cascas finas"
+---
+
+## Campo de tração diagonal {.semester-map}
+
+:::::::::: semester-grid
+::: {.semester-item .done}
+[01 · Introdução]{.semester-card-title}
+:::
+
+::: {.semester-item .done}
+[02 · Tração diagonal pura]{.semester-card-title}
+:::
+
+::: {.semester-item .done}
+[03 · Tração diagonal incompleta]{.semester-card-title}
+:::
+
+::::::::::
+
+```{python}
+#| echo: false
+#| include: false
+
+import matplotlib.pyplot as plt
+
+plt.rcParams["font.family"] = "Figtree"    # ou uma sans-serif próxima
+plt.rcParams["font.size"] = 14            # tamanho base
+plt.rcParams["axes.titlesize"] = 16       # títulos de eixos/plots
+plt.rcParams["axes.labelsize"] = 14
+plt.rcParams["xtick.labelsize"] = 12
+plt.rcParams["ytick.labelsize"] = 12
+plt.rcParams["legend.fontsize"] = 18
+
+BLACK = "#2a2a2a"
+BLUE = "#1f77b4"
+GREEN = "#59a89c"
+AMBAR = "#f0c571"
+PURPLE = "#a559aa"
+RED = "#e02b35"
+GRAY = "#cecece"
+```
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+## Introdução
+
+:::::: columns
+::: {.column width="50%"}
+
+Vigas como as longarinas de aeronaves sãop normalmente constituídas por flanges (mesas) conectadas por uma alma de baixa espessura reforçada verticalmente a intervalos.
+
+Nas vigas com alma resistente à flambagem, as tensões presentes neste elemento devem permanecer abaixo de valores admissíveis para este critério.
+
+Neste caso, as cargas admissíveis podem ser elevadas a partir de duas principais variações no projeto: elevar a espessura da alma ou reduzir as dimensões dos painéis, com a inclusão de mais reforçadores verticais.
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+![](figuras/coordinates.png){fig-align="center" width="100%"}
+:::
+::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Projeto de vigas resistentes à flambagem
+
+:::::: columns
+::: {.column width="50%"}
+
+É necessário garantir que as tensões presentes não superem seus valores admissíveis
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+![](figuras/coordinates.png){fig-align="center" width="100%"}
+:::
+::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+## ...
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Tração diagonal
+
+:::::: columns
+::: {.column width="50%"}
+
+Em alguns projetos de vigas, ou elementos de revestimento reforçados, [considera-se que a alma, ou revestimento de baixa espessura, possa sofrer flambagem]{.focus} assumindo um estado de tensão chamado de [tração diagonal]{.focus}.
+
+No entanto, suportada por flanges, reforçadores ou cavernas estes elementos flambados [ainda oferecem resistência ao carregamento.]{.focus}
+
+Neste estado, os elementos reforçadores sofrem então cargas adicionais, de modo a acomodar a flambagem da alma.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+![](figuras/coordinates.png){fig-align="center" width="100%"}
+:::
+::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Tração diagonal pura: Teoria de Wagner
+
+:::::: columns
+::: {.column width="50%"}
+
+Em um estado de tração diagonal pura, consideramos uma total perda de capacidade resistiva da alma perpendicular às meias ondas de flambagem (diagonal secundária).
+
+Consideramos um caso idealizado, onde as flanges suportam todo o carregamento de flexão enquanto alma suporta os esforços cisalhantes.
+
+Sob estas considerações, uma tensão de cisalhamento $\tau$ uniforme se distribui sobre a alma de espessura $t$ e contida entre flanges espaçadas em $d$.
+
+$$
+\tau = \frac{S}{t d}
+$$
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+![](figuras/coordinates.png){fig-align="center" width="100%"}
+:::
+::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
