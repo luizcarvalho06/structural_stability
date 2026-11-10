@@ -16,6 +16,7 @@ Aqui estão disponíveis as apresentações utilizadas nas aulas.
 | Tema | Material |
 |:-----|:---------|
 | Flambagem de cilindros | [Abrir apresentação](lectures/flambagem-cilindros/index.qmd) |
+| Campo de tração diagonal | [Abrir apresentação](lectures/diagonal_tension//index.qmd) |
 
 ## Professor
 
