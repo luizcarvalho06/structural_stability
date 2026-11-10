@@ -1501,7 +1501,7 @@ def plot_corrected_envelopes(rt_values):
 
 <!-- ===================== Slide 1 ===================== -->
 
-## Fator de knockdown {.knockdown-slide}
+## Correções semi-empíricas {.knockdown-slide}
 
 ::::::: columns
 ::: {.column width="48%"}
@@ -1614,7 +1614,7 @@ with plt.rc_context(PLOT_STYLE):
 
 
 
-## Correções semi-empíricas
+## Fator de knockdown: curvas corrigidas {.knockdown-slide}
 
 ::: panel-tabset
 ### Correção para R/t = 500
@@ -1647,3 +1647,319 @@ plt.show()
 plt.close(fig)
 ```
 :::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+## Flambagem de cascas
+
+::::::: columns
+::: {.column width="54%"}
+
+No projeto de estruturas aeroespaciais é comum a composição de painéis curvos dispostos entre elementos como as longarinas e reforçadores.
+
+Na sua análise partimos de mesma equação diferencial indicada na análise de cilindros, mas com condições de contorno diferentes.
+
+Ao invés da condição de continuidade de deslocamentos e rotações ($w(x, 0) = w(x, 2\pi R)$) adotamos 2 novas condições independentes nas bordas $y = 0$ e $y = b$.
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="42%"}
+
+![](figuras/cylinder_to_shell.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Flambagem de cascas
+
+::::::: columns
+::: {.column width="54%"}
+
+Na solução deste novo problema ainda podemos escrever uma equação geral para a flambagem de cascas na forma padrão, apenas reorganizando a mesma em função da largura $b$ do painel curvo e trazendo novos valores para os coeficientes de flambagem, $k_{c,\mathrm{cr}}$.
+
+$$
+\sigma_{\mathrm{cr}}=\frac{k_c \pi ^2 E}{12(1-\mu^2)}\left(\frac{t}{b}\right)^2
+$$
+
+Acompanhando a alteração na forma padrão, o parâmetro de Batdorf também é modificado.
+
+$$
+Z=\frac{b^2}{R t}\sqrt{1-\mu^2}
+$$
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="42%"}
+
+![](figuras/compression_shell.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Flambagem de cascas
+
+::::::: columns
+::: {.column width="54%"}
+
+Nota-se que para [pequenos valores de $Z$ o comportamento do painel curvo é similar ao de uma placa plana]{.focus}, com flambagem em meia-onda longitudinal ($m=1$, $n=0$).
+
+Para [grandes valores de $Z$, o coeficiente de flambagem tende a acompanhar o comportamento de cilindros longos]{.focus}.
+
+Quando comparados a placas planas, observa-se que a elevação da curvatura confere rigidez à flambagem, analogamente à presença de ângulos em painéis compostos.
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="42%"}
+
+![](figuras/compression_shell.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Flambagem de cascas: cisalhamento
+
+::::::: columns
+::: {.column width="54%"}
+
+Na flambagem por cisalhamento, apenas modificando o carregamento atuante na solução da equação diferencial, também podemos representar a carga crítica de flambagem na forma padrão, com novos coeficientes de flambagem $k_{s}$.
+
+$$
+\tau_{\mathrm{cr}}=\frac{k_s \pi ^2 E}{12(1-\mu^2)}\left(\frac{t}{b}\right)^2
+$$
+
+No entanto, [o comportamento dos painéis depende se a curvatura é observada em seu lado menor $a$ ou maior $b$]{.focus}, lembrando que a relação cinemática com contribuição de $w$ e $R$ é observada apenas na direção da curvatura.
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="42%"}
+
+![](figuras/shear_short_long_cylinder.png){fig-align="center" width="50%"}
+
+::::
+:::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Flambagem de cascas: cisalhamento - apoio simples
+
+::::::: columns
+::: {.column width="48%"}
+![](figuras/long_ss_shear.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/wide_ss_shear.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Flambagem de cascas: cisalhamento - engastado
+
+::::::: columns
+::: {.column width="48%"}
+![](figuras/long_cc_shear.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/wide_cc_shear.png){fig-align="center" width="92%"}
+
+::::
+:::::::
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Carregamentos combinados
+
+Para carregamentos combinados podemos utilizar [relações de interação]{.focus}, compostas a partir da razões de carregamentos para cada solicitação ($f_{atuante} / f_{admissível}$).
+
+Para um carregamento combinado de compressão axial ($R_L$) e cisalhamento ($R_S$):
+$$
+R_S^2 + R_L = 1
+$$
+
+Com margem de seguranção igual a:
+$$
+M.S. = \frac{2}{R_L + \sqrt{R_L^2 + 4 R_S^2}} - 1
+$$
+
+No caso da flexão, podemos utilizar as relações de compressão considerando [valores médios ou máximos de tensão compressiva devido à flexão]{.focus} presente no painel.
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Carregamentos combinados: pressurização interna
+
+::::::: columns
+::: {.column width="48%"}
+
+Quando submetidas a pressurização interna, estruturas formadas por painéis curvos tem sua [carga crítica de flambagem aumentada]{.focus}.
+
+O efeito da pressurização pode ser calculado a partir das seguintes relações de iteração, válidas respectivamente para compressão e cisalhamento.
+$$
+R_L^2 + R_P = 1 \qquad \text{e} \qquad R_S^2 + R_P = 1
+$$
+
+Neste caso, $R_P$ é a razão entre a pressão interna (-) e uma pressão externa capaz de flambar o cilindro do qual o painel avaliado faz parte $F_{C_{cr}}t/R$.
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/pressure_cylinder.png){fig-align="center" width="100%"}
+
+::::
+:::::::
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Estabilidade de estruturas semi-monocoque
+
+::::::: columns
+::: {.column width="48%"}
+
+Uma estrutura semi-monocoque consiste em um [revestimento em crvatura reforçado por cavernas e reforçadores longitudinais]{.focus}.
+
+A falha deste tipo de estrutura deve ser avaliada em seus componentes individuais e na estrutura como o todo.
+
+Os modos de falha podem ser agrupados em:
+
+[1\. Flambagem do revestimento]{.focus}
+
+[2\. Flambagem dos painéis reforçados]{.focus}
+
+[3\. Flambagem geral]{.focus}
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/monocoque.png){fig-align="center" width="80%"}
+
+::::
+:::::::
+
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Estabilidade de estruturas semi-monocoque
+
+[**Flambagem do revestimento**]{.focus}
+
+Considerando as condições de contorno e geometrias definidas para cada painel isolado (limitados por reforçadores e cavernas) podemos calcular admissíveis para as cargas críticas de flambagem para diferentes tipos de carregamentos utilizando os gráficos estudados.
+
+Em algumas situações é possível tolerar a flambagem dos painéis e calcular uma redistribuição das tensões na estrutura a partir desta flambagem (Tensão diagonal).
+
+[**Flambagem de painéis reforçados**]{.focus}
+
+A falha de um painel reforçado significa que o reforçador e a largura efetiva do revestimento que o fornece suporte não são mais capazes de suportar o carregamento, sendo identificada a partir da análise de falha local (Crippling), falha como coluna, efeitos combinados (Johnson-Euler) ou mesmo escoamento.
+
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Estabilidade de estruturas semi-monocoque
+
+[**Flambagem geral da estrutura**]{.focus}
+
+Na instabilidade geral, a flambagem não se limita aos comprimentos delimitados pelas cavernas, ocorrendo quando a rigidez dessas não é suficiente.
+
+As cargas admissíveis para este tipo de falha podem ser aproximada ao considerarmos distribuições uniformes de reforçadores longitudinais e cavernas (casca ortotrópica), utilizando a aproximação semi-empírica na tabela abaixo.
+
+
+
+![](figuras/monocoque_table.png){fig-align="center" width="80%"}
+
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+<!-- ============================================================================================================================== -->
+
+
+## Exercício
+
+::::::: columns
+::: {.column width="48%"}
+
+A fuselagem circular ilustrada é fabricada em alumínio com módulo de elasticidade 10700 ksi. Cada um de seus reforçadores possui uma área de 0,15 in$^2$, seu revestimento possui 0,04 in de espessura e as cavernas são separadas em 15,75 in. A fuselagem é submetida a uma flexão $M_y$ de 600000 in lb provocando compressão em sua metade superior  e uma torção $T$ de 210000 in lbs com sentido anti-horário.
+
+Determine a margem de segurança para flambagem nos painéis A e B.
+
+:::
+
+::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+
+![](figuras/exercicio.png){fig-align="center" width="100%"}
+
+::::
+:::::::
