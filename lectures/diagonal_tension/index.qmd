@@ -1,6 +1,6 @@
 ---
 title: "Teoria das Estruturas Aeroespaciais II"
-subtitle: "Flambagem de cilindros e cascas finas"
+subtitle: "Campo de Tração Diagonal"
 ---
 
 ## Campo de tração diagonal {.semester-map}
