@@ -1,5 +1,264 @@
 [
   {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-incompleta",
+    "href": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-incompleta",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tração diagonal incompleta",
+    "text": "Tração diagonal incompleta\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#introdução",
+    "href": "lectures/incomplete_diagonal_tension/index.html#introdução",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Introdução",
+    "text": "Introdução\n\n\nTratando da tração diagonal pura (ou completa) consideramos o caso extremo onde a placa perde sua capacidade de carga sob compressão completamente.\nNo entanto, após a flambagem na maioria dos casos práticos, uma parte dessa resistência ainda se mantém caracterizando uma tração diagonal incompleta.\nNeste novo caso, métodos semi-empíricos devem ser utilizados para tratar a análise de tensões e deformações."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal",
+    "href": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Fator de tração diagonal",
+    "text": "Fator de tração diagonal\n\n\nConsideramos que o [cisalhamento presente na alma pode ser dividido em duas parcelas]: um cisalhamento verdadeiro \\(\\tau\\) e um cisalhamento devido à tração diagonal \\(\\tau_{DT}\\).\nO fator de tração diagonal \\(k\\) define a proporção em que o cisalhamento se divide para as duas parcelas definidas anteriormente.\nO valor de \\(k\\) varia entre \\(k\\) = 0 para uma placa não flambada e \\(k\\) = 1 para um estado de tração diagonal pura.\nNa região intermediária seu valor pode ser obtido através da seguinte relação empírica a qual depende da razão de carregamento \\(\\tau/\\tau_{CR}\\).\n\n\n\n\\[\n\\tau = \\tau_s + \\tau_{DT}\n\\]\n\n\n\n\n\\[\n\\tau_s = (1 - k) \\tau \\qquad \\text{e} \\qquad \\tau_{DT} = k \\tau\n\\]\n\n\n\n\n\\[\nk = \\tanh{0.5 \\log_{10}{\\frac{\\tau}{\\tau_{cr}}}}\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem",
+    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tensões críticas de flambagem",
+    "text": "Tensões críticas de flambagem\n\n\nNa razão de carregamento, a tensão de cisalhamento atuante é dividida pela tensão crítica de flambagem da placa.\nEssa tensão crítica depende das restrições nas bordas impostas pelos reforçadores (\\(R_h\\)) e pelas flanges (\\(R_d\\)), além do coeficiente de flambagem \\(k_{ss}\\).\nOs termos \\(R_h\\) e \\(R_d\\) são valores empíricos descritos em função das razões entre as espessuras da flange e da alma (\\(t_F/t\\)) e do reforçador e da alma (\\(t_U/t\\)).\nPara valores de tensão acima do limite de escoamento do material, devem ser utilizadas correções plásticas, conforme os ábacos a seguir.\n\n\n\n\n\n\n\n\n\n\n\\[\n\\tau_{cr,\\mathrm{elastic}}\n=\nk_{ss}E\n\\left(\\frac{t}{b}\\right)^2\n\\left[\nR_h\n+\n\\frac{1}{2}(R_d-R_h)\n\\left(\\frac{d}{h}\\right)^3\n\\right]\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#coeficiente-de-flambagem-e-fatores-de-restrição",
+    "href": "lectures/incomplete_diagonal_tension/index.html#coeficiente-de-flambagem-e-fatores-de-restrição",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Coeficiente de flambagem e fatores de restrição",
+    "text": "Coeficiente de flambagem e fatores de restrição"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#correção-plástica",
+    "href": "lectures/incomplete_diagonal_tension/index.html#correção-plástica",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Correção plástica",
+    "text": "Correção plástica"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões",
+    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Análise de tensões",
+    "text": "Análise de tensões\n\n\nA partir do fator \\(k\\) e do ângulo de tração diagonal \\(\\alpha\\), podemos calcular as tensões que surgem após a flambagem na direção de \\(\\alpha\\) (\\(\\sigma_1\\)) e na direção perpendicular a ela (\\(\\sigma_2\\)).\n\\[\n\\sigma_1\n=\n\\frac{2k\\tau}{\\sin 2\\alpha}\n+\n\\tau(1-k)\\sin 2\\alpha\n\\]\n\n\n\\[\n\\sigma_2\n=\n-\\tau(1-k)\\sin 2\\alpha\n\\]\nQuando \\(k\\) se aproxima de 1, recuperamos as relações para a tração diagonal pura."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-nos-reforçadores-verticais",
+    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-nos-reforçadores-verticais",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tensões nos reforçadores verticais",
+    "text": "Tensões nos reforçadores verticais\n\n\nAssim como na tração diagonal pura, essas tensões devem ser decompostas nas direções vertical e horizontal para o cálculo de seus efeitos nas flanges e nos reforçadores.\nComo a alma ainda suporta tensões de compressão, podemos considerar uma largura efetiva que contribui para a resistência dos reforçadores verticais.\nIncluindo essa contribuição da alma e considerando uma área efetiva dos reforçadores, que incorpora os efeitos de excentricidade, podemos calcular a tensão média nos reforçadores (\\(\\sigma_U\\)) pela relação ao lado.\n\n\n\n\\[\n\\frac{b_e}{b}\n=\n0.5(1-k)\n\\]\n\n\n\n\n\\[\n\\sigma_U\n=\n-\\frac{k\\tau\\tan\\alpha}\n{\\dfrac{A_u}{dt}+0.5(1-k)}\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-nas-flanges",
+    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-nas-flanges",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tensões nas flanges",
+    "text": "Tensões nas flanges\n\n\nAnalogamente, uma [tensão adicional nas flanges]{,focus} pode ser calculada pela seguinte relação:\n\\[\n\\sigma_F\n=\n-\\frac{k\\tau\\cot\\alpha}\n{\\dfrac{2A_F}{ht}+0.5(1-k)}\n\\]\nPara calcular o ângulo de tração diagonal, devemos novamente encontrar o valor que minimiza a energia de deformação da estrutura.\nPara placas planas, os valores de \\(\\alpha\\) normalmente se encontram entre \\(38^\\circ\\) e \\(45^\\circ\\).\n\n\n\n\\[\n\\tan^2\\alpha\n=\n\\frac{\\varepsilon-\\varepsilon_F}\n{\\varepsilon-\\varepsilon_U}\n\\]\n\n\n\\[\n\\varepsilon_F = \\frac{\\sigma_F}{E}\n\\qquad\n\\varepsilon_U = \\frac{\\sigma_U}{E}\n\\]\n\n\n\\[\n\\varepsilon\n=\n\\frac{1}{E}(\\sigma_1-\\mu\\sigma_2)\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-1",
+    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Análise de tensões",
+    "text": "Análise de tensões\nAo contrário do que observamos na tração diagonal completa, as relações para o ângulo de tração diagonal e para as tensões nos componentes (\\(\\sigma_F\\) e \\(\\sigma_U\\)) são acopladas e devem ser resolvidas iterativamente.\n1. Assume-se um valor inicial de \\(\\alpha\\), utilizado para calcular as tensões \\(\\sigma_F\\), \\(\\sigma_U\\), \\(\\sigma_1\\) e \\(\\sigma_2\\).\n2. A partir dessas tensões, calculam-se as deformações \\(\\varepsilon_F\\), \\(\\varepsilon_U\\) e \\(\\varepsilon\\).\n3. Os valores das deformações são utilizados para atualizar \\(\\alpha\\), repetindo-se o processo até a convergência.\nQuando a rigidez das flanges é significativamente maior que a da alma, \\(\\varepsilon_F\\) é pouco significativa em comparação com \\(\\varepsilon\\). Nesse caso, o processo iterativo pode ser evitado, e as tensões nos reforçadores verticais podem ser calculadas diretamente pelo ábaco a seguir."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-2",
+    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-2",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Análise de tensões",
+    "text": "Análise de tensões"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Ruptura da alma",
+    "text": "Modos de falha: Ruptura da alma\nApós a análise das tensões no estado de tração diagonal e a determinação de \\(k\\) e \\(\\alpha\\), podemos utilizar essas informações para avaliar a falha dos componentes individuais.\nPara cargas elevadas após a flambagem, a alma pode falhar por ruptura do material ao atingir uma tensão de cisalhamento máxima \\(\\tau'_{\\max}\\), definida em função de uma correção \\(C_1\\) para o ângulo \\(\\alpha\\) e de uma correção \\(C_2\\) para a concentração de tensões.\n\n\n\\[\n\\tau'_{\\max}\n=\n\\tau(1+k^2C_1)(1+kC_2)\n\\]\n\n\n\\[\nC_1\n=\n\\frac{1}{\\sin 2\\alpha}-1\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-1",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Ruptura da alma",
+    "text": "Modos de falha: Ruptura da alma\n\n\nO fator de correção \\(C_2\\) pode ser obtido graficamente em função do parâmetro \\(\\omega d\\), calculado conforme indicado no gráfico.\nOs termos \\(I_T\\) e \\(I_C\\) representam, respectivamente, os momentos de inércia das flanges sob tração e sob compressão.\n\\[\n\\omega d\n=\n0.7b\n\\sqrt[4]{\n\\frac{t}{(I_C+I_T)d_e}\n}\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-2",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-2",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Ruptura da alma",
+    "text": "Modos de falha: Ruptura da alma\nAs tensões máximas calculadas devem ser comparadas com os valores admissíveis, conforme mostrado nos gráficos abaixo para os alumínios das classes 24S e 75S.\nObservamos para este caso que os valores admissíveis não são dependentes apenas do material, mas também do estado de deformação."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Falha dos reforçadores verticais",
+    "text": "Modos de falha: Falha dos reforçadores verticais\nAo analisarmos os reforçadores verticais, podemos observar alguns modos de falha distintos: falha como coluna, falha local e falha local forçada.\nNa falha como coluna, ao se iniciar a flambagem do reforçador, calculada pela equação de Euler, as tensões na alma desenvolvem uma força restauradora que se opõe à deflexão. Esse efeito pode ser incluído na análise de flambagem por meio da modificação do comprimento efetivo (\\(L_e\\)) da coluna, conforme a seguinte relação:\n\\[\nL_e\n=\n\\frac{d_U}\n{\\sqrt{\n1+k^2\\left(3-2\\frac{d}{h_U}\\right)\n}}\n\\qquad\n(d&lt;1.5h_U)\n\\]\nO comprimento do reforçador \\(d_U\\) deve ser medido entre os centroides das linhas de rebites que o conectam às flanges."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais-1",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Falha dos reforçadores verticais",
+    "text": "Modos de falha: Falha dos reforçadores verticais\n\n\nA falha local das seções dos reforçadores normalmente não é dominante na análise desses elementos, mas seu efeito combinado com a falha como coluna pode ser investigado por meio da equação de Johnson–Euler.\nAs ondas de flambagem da alma podem forçar a flambagem dos reforçadores, principalmente quando estes apresentam pequena espessura na região de conexão, caracterizando a chamada falha local forçada.\nEsse tipo de falha, aplicável a reforçadores simples ou simétricos, normalmente constitui o modo dominante no projeto desses elementos."
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-local-forçada",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-local-forçada",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Falha local forçada",
+    "text": "Modos de falha: Falha local forçada\n\n\nPara reforçadores duplos, as seguintes relações podem ser utilizadas para estimar as tensões admissíveis para a falha local forçada.\n\\[\n\\sigma_o\n=\n21k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]\n\n\n\nPara reforçadores simples, podem ser utilizadas estimativas diferentes.\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n32.5k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]"
+  },
+  {
+    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-tensão-máxima-nos-reforçadores",
+    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-tensão-máxima-nos-reforçadores",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Modos de falha: Tensão máxima nos reforçadores",
+    "text": "Modos de falha: Tensão máxima nos reforçadores\n\n\nDevido ao caráter local desse tipo de falha, não devemos comparar as tensões admissíveis com as tensões \\(\\sigma_U\\), que representam valores médios ao longo do reforçador.\nA comparação deve ser feita com os valores máximos dessas tensões, que podem ser obtidos graficamente.\nPara análise das flanges apenas os modos clássicos para estes elementos podem ser avaliadas como a Flambagem como coluna, Falha local (e interação entre elas) e falhas por cisalhamento ou ruptura do material utilizado."
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Campo de tração diagonal",
+    "text": "Campo de tração diagonal\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#introdução",
+    "href": "lectures/diagonal_tension/index.html#introdução",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Introdução",
+    "text": "Introdução\n\n\nVigas como as longarinas de aeronaves são normalmente constituídas por flanges (mesas) conectadas por uma alma de baixa espessura, reforçada verticalmente a intervalos.\nNas vigas com alma resistente à flambagem, as tensões presentes neste elemento devem permanecer abaixo de valores admissíveis para este critério.\nNeste caso, as cargas admissíveis podem ser elevadas a partir de duas principais variações no projeto: elevar a espessura da alma ou reduzir as dimensões dos painéis, com a inclusão de mais reforçadores verticais."
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
+    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Projeto de vigas resistentes à flambagem: alma",
+    "text": "Projeto de vigas resistentes à flambagem: alma\n\n\nNo projeto das almas resistentes à flambagem devem ser realizadas três observações:\n1. Comparar as tensões de cisalhamento presentes \\(\\sigma_s = W Q / I t\\) ou (aproximadamente \\(W / t d\\)) com os limites de falha do material.\n2. Avaliar a resistência dos elementos de união.\n3. Avaliar os limites de flambagem de cada seção da alma utilizando as relações clássicas de flambagem de placas ou cascas (se tratando de um revestimento):\n\\[\n\\sigma_{cr} = \\frac{k_s \\pi^2 E}{12(1 - \\nu^2)}\\left(\\frac{t}{b})\\right)\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
+    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Projeto de vigas resistentes à flambagem: mesas",
+    "text": "Projeto de vigas resistentes à flambagem: mesas\n\n\nDe modo geral, as mesas ou flanges, devem apresentar inércia o suficiente para resistir à flexão imposta à longarina.\nTipicamente, temos a mesa inferior trabalhando sob tração e sendo avaliada sobre escoamento do material; a mesa superior, trabalhando sob compressão, deve ser avaliada sob escoamento e também sob estabilidade local.\nQuando a dimensão das mesas é pequena quando comparada com a altura da viga, podemos aproximar as tensões nestes elementos a partir da relação \\(\\sigma = M / h_e A_f\\) onde \\(h_e\\) é a altura da viga medida entre os centróides das mesas e \\(A_f\\) é a área destas."
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
+    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
+    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais\n\n\nNa ausência de cargas externas aplicadas sobre eles, a função dos reforçadores verticais é reduzir as dimensões efetivas dos painéis formados na alma, conferindo-os maior resistência a flambagem.\nPara cumprir esta função, eles devem apresentar uma certa rigidez mínima necessária; que pode ser determinada a partir da equação de Wagner descrevendo a momento de inércia do reforçador \\(I_v\\) em função da distância entre os reforçadores \\(b\\), da altura da alma \\(h_e\\), da força cortante na seção \\(V\\), da espessura da alma \\(t\\) e do módulo de elasticidade do material \\(E\\).\nObserva-se que a razão entre o espaçamento dos reforçadores e altura da alma normalmente se encontra entre 0,2 e 1,0.\n\n\n\n\\[\nI_v = \\frac{2{,}29\\,d}{t}\\,\n      \\frac{V\\,h_w^{4/3}}{33E}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
+    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
+    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tração diagonal",
+    "text": "Tração diagonal\n\n\nEm alguns projetos de vigas, ou elementos de revestimento reforçados, considera-se que a alma, ou revestimento de baixa espessura, possa sofrer flambagem assumindo um estado de tensão chamado de tração diagonal.\nNo entanto, suportada por flanges, reforçadores ou cavernas estes elementos flambados ainda oferecem resistência ao carregamento.\nNeste estado, os elementos reforçadores sofrem então cargas adicionais, de modo a acomodar a flambagem da alma.\n\n\n\n\nVigaRevestimentoRevestimentoAnalogia"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
+    "href": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Tração diagonal pura: Teoria de Wagner",
+    "text": "Tração diagonal pura: Teoria de Wagner\n\n\nEm um estado de tração diagonal pura, consideramos uma total perda de capacidade resistiva da alma perpendicular às meias ondas de flambagem (diagonal secundária).\nConsideramos um caso idealizado, onde as flanges suportam todo o carregamento de flexão enquanto alma suporta os esforços cisalhantes.\nSob estas considerações, com carga pontual \\(W\\) uma tensão de cisalhamento \\(\\tau\\) uniforme se distribui sobre a alma de espessura \\(t\\) e contida entre flanges espaçadas em \\(d\\).\n\\[\n\\tau = \\frac{W}{t d}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: tensão de tração diagonal",
+    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nPara entender a redistribuição de tensões em um caso de tração diagonal pura vamos observar um pequeno elemento ABCD da alma, no qual identificamos a tensão de tração diagonal \\(\\sigma_t\\) orientada a um ângulo de tração diagonal \\(\\alpha\\) na alma.\nA partir de um equilíbrio de forças verticais, a tensão \\(\\sigma_t\\) pode ser calculada em função da tensão de cisalhamento presente na alma.\n\\[\n\\sigma_t = \\frac{\\tau}{\\sin{\\alpha} \\cos{\\alpha}}\n\\]\nAplicação a relação para a tensão de cilhamento podemos obter a tensão de tração diagonal em função do carregamento externo \\(W\\). \\[\n\\sigma_t = \\frac{2 W}{t d \\sin{2 \\alpha}}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: tensão de tração diagonal",
+    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nA partir da definição da tensão de tração diagonal, podemos identificar tensões \\(\\sigma_z\\) na horizontal e \\(\\sigma_y\\) na vertical, mantendo o equilíbrio no elemento ABCD.\nEstas tensões de equilíbrio serão comunicadas aos elementos reforçadores adjacentes.\nConsiderando uma tensão \\(\\sigma_z\\) no elemento seccionado verticalmente, podemos calcular seu valor em função da tensão de cisalhamento ou do carregamento externo diretamente.\n\\[\n\\sigma_z = \\frac{\\tau}{\\tan{\\alpha}} = \\frac{W}{t d \\tan{\\alpha}}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: cargas primárias nas flanges",
+    "text": "Teoria de Wagner: cargas primárias nas flanges\n\n\nConsiderando uma tensão \\(\\sigma_z\\) constante ao longo da alma podemos inferir os carregamentos \\(F_T\\) e \\(F_B\\) totais nas flanges a partir do equilíbrio de momentos.\nNota-se que os carregamentos totais nas flanges são então produzidos por uma combinação do momento fletor gerado pelo carregamento externo e do carregamento adicional resultante do estado de tração diagonal puro.\nNa flange superior observamos um incremento no carregamento enquanto na inferior um alívio do carregamento.\n\\[\nF_T = \\frac{W z}{d} + \\frac{W}{2 \\tan{\\alpha}}\n\\qquad \\text{e} \\qquad\nF_B = \\frac{W z}{d} - \\frac{W}{2 \\tan{\\alpha}}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
+    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nAvaliamos novamente um elemento da alma, agora seccionado horizontalmente, onde a tensão \\(\\sigma_y\\) pode ser obtida em um equilíbrio de forças vertical.\n\\[\n\\sigma_y = \\tau \\tan{\\alpha} = \\frac{W \\tan{\\alpha}}{t d}\n\\]\nPodemos assumir que cada reforçador vertical deve suportar uma carga compressiva \\(P\\) equilibrando a resultante das tensões \\(\\sigma_y\\) atuantes nos painéis da alma adjacentes.\nConsiderando uma tensão \\(\\sigma_y\\) constante na alma e que cada reforçador suporte metade de seus painéis adjacentes temos a seguinte relação:\n\\[\nP = \\frac{W b \\tan{\\alpha}}{d}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
+    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nA carga compressiva nos reforçadores, além de ser verificada a escoamento do material, pode também causar a flabagem destes elementos.\nNo entanto, a interação da flambagem da alma com a flambagem do reforçador torna necessário um ajuste sobre o seu comprimento efetivo.\n\\[\nl_e =\n\\begin{cases}\n\\dfrac{d}{\\sqrt{4-2b/d}},\n& \\text{para } b \\leq 1{,}5d, \\\\[8pt]\nd,\n& \\text{para } b \\geq 1{,}5d.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: cargas secundárias nas flanges",
+    "text": "Teoria de Wagner: cargas secundárias nas flanges\n\n\nAs tensões distribuídas \\(\\sigma_y\\) além de compressão direta nos reforçadores verticais, também produzem flexão nas flanges entre estes reforçadores.\nCada seção de flange atua como uma viga engastada portanto um carregamento uniformemente distribuído de intensidade \\(\\sigma_y t\\).\nNestas condições, um momento máximo na flange pode ser determinado nos arredores dos reforçadores verticais.\n\\[\nM_{max} = \\frac{\\sigma_y t b^2}{12} = \\frac{W b^2 \\tan{\\alpha}}{12 d}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: ângulo de tração diagonal",
+    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nO ângulo de tração diagonal \\(\\alpha\\) se ajusta de modo a minimizar a energia de deformação da estrutura.\nQuando as flanges e reforçadores verticais são idealmente rígidos quando comparados à alma, a energia de deformaçaõ se deve apenas à lama resultando em um ângulo de 45º.\nPara estruturas reais, considerando elementos fabricados em um mesmo material, podemos aproximar o ângulo a partir da seguinte relação:\n\\[\n\\tan^2{\\alpha} = \\frac{\\sigma_t + \\sigma_F}{\\sigma_t + \\sigma_S}\n\\]"
+  },
+  {
+    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
+    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Teoria de Wagner: ângulo de tração diagonal",
+    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nAs tensões \\(\\sigma_F\\) e \\(\\sigma_S\\) correspondem respectivamente aos adicionais de tensão diretas na flange e reforçadores devido ao estado de tração diagonal pura.\n\\[\n\\sigma_F = \\frac{W}{2 A_F \\tan{\\alpha}} \\qquad \\text{e} \\qquad \\sigma_S = \\frac{W b\\tan{\\alpha}}{A_S d}\n\\]\nDeste modo, podemos obter uma relação para o ângulo de tração diagonal puramente geométrica.\n\\[\n\\tan^4{\\alpha} = \\frac{1 + t d / 2 A_F}{1 + tb/A_S}\n\\]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "",
+    "text": "Bem-vindo à página de materiais da disciplina.\nAqui estão disponíveis as apresentações utilizadas nas aulas."
+  },
+  {
+    "objectID": "index.html#aulas",
+    "href": "index.html#aulas",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Aulas",
+    "text": "Aulas\n\n\n\nTema\nMaterial\n\n\n\n\nFlambagem de cilindros\nAbrir apresentação\n\n\nCampo de tração diagonal\nAbrir apresentação\n\n\nTração diagonal incompleta\nAbrir apresentação"
+  },
+  {
+    "objectID": "index.html#professor",
+    "href": "index.html#professor",
+    "title": "Teoria das Estruturas Aeroespaciais II",
+    "section": "Professor",
+    "text": "Professor\nLuiz Carvalho\nUniversidade Federal de Minas Gerais — UFMG\nContato: luizcarvalho@demec.ufmg.br"
+  },
+  {
     "objectID": "lectures/flambagem-cilindros/index.html#flambagem-de-cilindros-e-cascas-finas",
     "href": "lectures/flambagem-cilindros/index.html#flambagem-de-cilindros-e-cascas-finas",
     "title": "Teoria das Estruturas Aeroespaciais II",
@@ -194,467 +453,5 @@
     "title": "Teoria das Estruturas Aeroespaciais II",
     "section": "Exercício",
     "text": "Exercício\n\n\nA fuselagem circular ilustrada é fabricada em alumínio com módulo de elasticidade 10700 ksi. Cada um de seus reforçadores possui uma área de 0,15 in\\(^2\\), seu revestimento possui 0,04 in de espessura e as cavernas são separadas em 15,75 in. A fuselagem é submetida a uma flexão \\(M_y\\) de 600000 in lb provocando compressão em sua metade superior e uma torção \\(T\\) de 210000 in lbs com sentido anti-horário.\nDetermine a margem de segurança para flambagem nos painéis A e B."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "",
-    "text": "Bem-vindo à página de materiais da disciplina.\nAqui estão disponíveis as apresentações utilizadas nas aulas."
-  },
-  {
-    "objectID": "index.html#aulas",
-    "href": "index.html#aulas",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Aulas",
-    "text": "Aulas\n\n\n\nTema\nMaterial\n\n\n\n\nFlambagem de cilindros\nAbrir apresentação\n\n\nCampo de tração diagonal\nAbrir apresentação"
-  },
-  {
-    "objectID": "index.html#professor",
-    "href": "index.html#professor",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Professor",
-    "text": "Professor\nLuiz Carvalho\nUniversidade Federal de Minas Gerais — UFMG\nContato: luizcarvalho@demec.ufmg.br"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
-    "href": "lectures/diagonal_tension/index.html#campo-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Campo de tração diagonal",
-    "text": "Campo de tração diagonal\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#introdução",
-    "href": "lectures/diagonal_tension/index.html#introdução",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Introdução",
-    "text": "Introdução\n\n\nVigas como as longarinas de aeronaves são normalmente constituídas por flanges (mesas) conectadas por uma alma de baixa espessura, reforçada verticalmente a intervalos.\nNas vigas com alma resistente à flambagem, as tensões presentes neste elemento devem permanecer abaixo de valores admissíveis para este critério.\nNeste caso, as cargas admissíveis podem ser elevadas a partir de duas principais variações no projeto: elevar a espessura da alma ou reduzir as dimensões dos painéis, com a inclusão de mais reforçadores verticais."
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
-    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: alma",
-    "text": "Projeto de vigas resistentes à flambagem: alma\n\n\nNo projeto das almas resistentes à flambagem devem ser realizadas três observações:\n1. Comparar as tensões de cisalhamento presentes \\(\\sigma_s = W Q / I t\\) ou (aproximadamente \\(W / t d\\)) com os limites de falha do material.\n2. Avaliar a resistência dos elementos de união.\n3. Avaliar os limites de flambagem de cada seção da alma utilizando as relações clássicas de flambagem de placas ou cascas (se tratando de um revestimento):\n\\[\n\\sigma_{cr} = \\frac{k_s \\pi^2 E}{12(1 - \\nu^2)}\\left(\\frac{t}{b})\\right)\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
-    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: mesas",
-    "text": "Projeto de vigas resistentes à flambagem: mesas\n\n\nDe modo geral, as mesas ou flanges, devem apresentar inércia o suficiente para resistir à flexão imposta à longarina.\nTipicamente, temos a mesa inferior trabalhando sob tração e sendo avaliada sobre escoamento do material; a mesa superior, trabalhando sob compressão, deve ser avaliada sob escoamento e também sob estabilidade local.\nQuando a dimensão das mesas é pequena quando comparada com a altura da viga, podemos aproximar as tensões nestes elementos a partir da relação \\(\\sigma = M / h_e A_f\\) onde \\(h_e\\) é a altura da viga medida entre os centróides das mesas e \\(A_f\\) é a área destas."
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
-    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
-    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais\n\n\nNa ausência de cargas externas aplicadas sobre eles, a função dos reforçadores verticais é reduzir as dimensões efetivas dos painéis formados na alma, conferindo-os maior resistência a flambagem.\nPara cumprir esta função, eles devem apresentar uma certa rigidez mínima necessária; que pode ser determinada a partir da equação de Wagner descrevendo a momento de inércia do reforçador \\(I_v\\) em função da distância entre os reforçadores \\(b\\), da altura da alma \\(h_e\\), da força cortante na seção \\(V\\), da espessura da alma \\(t\\) e do módulo de elasticidade do material \\(E\\).\nObserva-se que a razão entre o espaçamento dos reforçadores e altura da alma normalmente se encontra entre 0,2 e 1,0.\n\n\n\n\\[\nI_v = \\frac{2{,}29\\,d}{t}\\,\n      \\frac{V\\,h_w^{4/3}}{33E}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
-    "href": "lectures/diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
-    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal",
-    "href": "lectures/diagonal_tension/index.html#tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tração diagonal",
-    "text": "Tração diagonal\n\n\nEm alguns projetos de vigas, ou elementos de revestimento reforçados, considera-se que a alma, ou revestimento de baixa espessura, possa sofrer flambagem assumindo um estado de tensão chamado de tração diagonal.\nNo entanto, suportada por flanges, reforçadores ou cavernas estes elementos flambados ainda oferecem resistência ao carregamento.\nNeste estado, os elementos reforçadores sofrem então cargas adicionais, de modo a acomodar a flambagem da alma.\n\n\n\n\nVigaRevestimentoRevestimentoAnalogia"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
-    "href": "lectures/diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tração diagonal pura: Teoria de Wagner",
-    "text": "Tração diagonal pura: Teoria de Wagner\n\n\nEm um estado de tração diagonal pura, consideramos uma total perda de capacidade resistiva da alma perpendicular às meias ondas de flambagem (diagonal secundária).\nConsideramos um caso idealizado, onde as flanges suportam todo o carregamento de flexão enquanto alma suporta os esforços cisalhantes.\nSob estas considerações, com carga pontual \\(W\\) uma tensão de cisalhamento \\(\\tau\\) uniforme se distribui sobre a alma de espessura \\(t\\) e contida entre flanges espaçadas em \\(d\\).\n\\[\n\\tau = \\frac{W}{t d}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: tensão de tração diagonal",
-    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nPara entender a redistribuição de tensões em um caso de tração diagonal pura vamos observar um pequeno elemento ABCD da alma, no qual identificamos a tensão de tração diagonal \\(\\sigma_t\\) orientada a um ângulo de tração diagonal \\(\\alpha\\) na alma.\nA partir de um equilíbrio de forças verticais, a tensão \\(\\sigma_t\\) pode ser calculada em função da tensão de cisalhamento presente na alma.\n\\[\n\\sigma_t = \\frac{\\tau}{\\sin{\\alpha} \\cos{\\alpha}}\n\\]\nAplicação a relação para a tensão de cilhamento podemos obter a tensão de tração diagonal em função do carregamento externo \\(W\\). \\[\n\\sigma_t = \\frac{2 W}{t d \\sin{2 \\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: tensão de tração diagonal",
-    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nA partir da definição da tensão de tração diagonal, podemos identificar tensões \\(\\sigma_z\\) na horizontal e \\(\\sigma_y\\) na vertical, mantendo o equilíbrio no elemento ABCD.\nEstas tensões de equilíbrio serão comunicadas aos elementos reforçadores adjacentes.\nConsiderando uma tensão \\(\\sigma_z\\) no elemento seccionado verticalmente, podemos calcular seu valor em função da tensão de cisalhamento ou do carregamento externo diretamente.\n\\[\n\\sigma_z = \\frac{\\tau}{\\tan{\\alpha}} = \\frac{W}{t d \\tan{\\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nas flanges",
-    "text": "Teoria de Wagner: cargas primárias nas flanges\n\n\nConsiderando uma tensão \\(\\sigma_z\\) constante ao longo da alma podemos inferir os carregamentos \\(F_T\\) e \\(F_B\\) totais nas flanges a partir do equilíbrio de momentos.\nNota-se que os carregamentos totais nas flanges são então produzidos por uma combinação do momento fletor gerado pelo carregamento externo e do carregamento adicional resultante do estado de tração diagonal puro.\nNa flange superior observamos um incremento no carregamento enquanto na inferior um alívio do carregamento.\n\\[\nF_T = \\frac{W z}{d} + \\frac{W}{2 \\tan{\\alpha}}\n\\qquad \\text{e} \\qquad\nF_B = \\frac{W z}{d} - \\frac{W}{2 \\tan{\\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
-    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nAvaliamos novamente um elemento da alma, agora seccionado horizontalmente, onde a tensão \\(\\sigma_y\\) pode ser obtida em um equilíbrio de forças vertical.\n\\[\n\\sigma_y = \\tau \\tan{\\alpha} = \\frac{W \\tan{\\alpha}}{t d}\n\\]\nPodemos assumir que cada reforçador vertical deve suportar uma carga compressiva \\(P\\) equilibrando a resultante das tensões \\(\\sigma_y\\) atuantes nos painéis da alma adjacentes.\nConsiderando uma tensão \\(\\sigma_y\\) constante na alma e que cada reforçador suporte metade de seus painéis adjacentes temos a seguinte relação:\n\\[\nP = \\frac{W b \\tan{\\alpha}}{d}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
-    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nA carga compressiva nos reforçadores, além de ser verificada a escoamento do material, pode também causar a flabagem destes elementos.\nNo entanto, a interação da flambagem da alma com a flambagem do reforçador torna necessário um ajuste sobre o seu comprimento efetivo.\n\\[\nl_e =\n\\begin{cases}\n\\dfrac{d}{\\sqrt{4-2b/d}},\n& \\text{para } b \\leq 1{,}5d, \\\\[8pt]\nd,\n& \\text{para } b \\geq 1{,}5d.\n\\end{cases}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas secundárias nas flanges",
-    "text": "Teoria de Wagner: cargas secundárias nas flanges\n\n\nAs tensões distribuídas \\(\\sigma_y\\) além de compressão direta nos reforçadores verticais, também produzem flexão nas flanges entre estes reforçadores.\nCada seção de flange atua como uma viga engastada portanto um carregamento uniformemente distribuído de intensidade \\(\\sigma_y t\\).\nNestas condições, um momento máximo na flange pode ser determinado nos arredores dos reforçadores verticais.\n\\[\nM_{max} = \\frac{\\sigma_y t b^2}{12} = \\frac{W b^2 \\tan{\\alpha}}{12 d}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: ângulo de tração diagonal",
-    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nO ângulo de tração diagonal \\(\\alpha\\) se ajusta de modo a minimizar a energia de deformação da estrutura.\nQuando as flanges e reforçadores verticais são idealmente rígidos quando comparados à alma, a energia de deformaçaõ se deve apenas à lama resultando em um ângulo de 45º.\nPara estruturas reais, considerando elementos fabricados em um mesmo material, podemos aproximar o ângulo a partir da seguinte relação:\n\\[\n\\tan^2{\\alpha} = \\frac{\\sigma_t + \\sigma_F}{\\sigma_t + \\sigma_S}\n\\]"
-  },
-  {
-    "objectID": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
-    "href": "lectures/diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: ângulo de tração diagonal",
-    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nAs tensões \\(\\sigma_F\\) e \\(\\sigma_S\\) correspondem respectivamente aos adicionais de tensão diretas na flange e reforçadores devido ao estado de tração diagonal pura.\n\\[\n\\sigma_F = \\frac{W}{2 A_F \\tan{\\alpha}} \\qquad \\text{e} \\qquad \\sigma_S = \\frac{W b\\tan{\\alpha}}{A_S d}\n\\]\nDeste modo, podemos obter uma relação para o ângulo de tração diagonal puramente geométrica.\n\\[\n\\tan^4{\\alpha} = \\frac{1 + t d / 2 A_F}{1 + tb/A_S}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#campo-de-tração-diagonal",
-    "href": "lectures/incomplete_diagonal_tension/index.html#campo-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Campo de tração diagonal",
-    "text": "Campo de tração diagonal\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#introdução",
-    "href": "lectures/incomplete_diagonal_tension/index.html#introdução",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Introdução",
-    "text": "Introdução\n\n\nTratando da tração diagonal pura (ou completa) consideramos o caso extremo onde a placa perde sua capacidade de carga sob compressão completamente.\nNo entanto, após a flambagem na maioria dos casos práticos, uma parte dessa resistência ainda se mantém caracterizando uma tração diagonal incompleta.\nNeste novo caso, métodos semi-empíricos devem ser utilizados para tratar a análise de tensões e deformações."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
-    "href": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-alma",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: alma",
-    "text": "Projeto de vigas resistentes à flambagem: alma\n\n\nNo projeto das almas resistentes à flambagem devem ser realizadas três observações:\n1. Comparar as tensões de cisalhamento presentes \\(\\sigma_s = W Q / I t\\) ou (aproximadamente \\(W / t d\\)) com os limites de falha do material.\n2. Avaliar a resistência dos elementos de união.\n3. Avaliar os limites de flambagem de cada seção da alma utilizando as relações clássicas de flambagem de placas ou cascas (se tratando de um revestimento):\n\\[\n\\sigma_{cr} = \\frac{k_s \\pi^2 E}{12(1 - \\nu^2)}\\left(\\frac{t}{b})\\right)\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
-    "href": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-mesas",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: mesas",
-    "text": "Projeto de vigas resistentes à flambagem: mesas\n\n\nDe modo geral, as mesas ou flanges, devem apresentar inércia o suficiente para resistir à flexão imposta à longarina.\nTipicamente, temos a mesa inferior trabalhando sob tração e sendo avaliada sobre escoamento do material; a mesa superior, trabalhando sob compressão, deve ser avaliada sob escoamento e também sob estabilidade local.\nQuando a dimensão das mesas é pequena quando comparada com a altura da viga, podemos aproximar as tensões nestes elementos a partir da relação \\(\\sigma = M / h_e A_f\\) onde \\(h_e\\) é a altura da viga medida entre os centróides das mesas e \\(A_f\\) é a área destas."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
-    "href": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
-    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais\n\n\nNa ausência de cargas externas aplicadas sobre eles, a função dos reforçadores verticais é reduzir as dimensões efetivas dos painéis formados na alma, conferindo-os maior resistência a flambagem.\nPara cumprir esta função, eles devem apresentar uma certa rigidez mínima necessária; que pode ser determinada a partir da equação de Wagner descrevendo a momento de inércia do reforçador \\(I_v\\) em função da distância entre os reforçadores \\(b\\), da altura da alma \\(h_e\\), da força cortante na seção \\(V\\), da espessura da alma \\(t\\) e do módulo de elasticidade do material \\(E\\).\nObserva-se que a razão entre o espaçamento dos reforçadores e altura da alma normalmente se encontra entre 0,2 e 1,0.\n\n\n\n\\[\nI_v = \\frac{2{,}29\\,d}{t}\\,\n      \\frac{V\\,h_w^{4/3}}{33E}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#projeto-de-vigas-resistentes-à-flambagem-reforçadores-verticais-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Projeto de vigas resistentes à flambagem: reforçadores verticais",
-    "text": "Projeto de vigas resistentes à flambagem: reforçadores verticais"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tração diagonal",
-    "text": "Tração diagonal\n\n\nEm alguns projetos de vigas, ou elementos de revestimento reforçados, considera-se que a alma, ou revestimento de baixa espessura, possa sofrer flambagem assumindo um estado de tensão chamado de tração diagonal.\nNo entanto, suportada por flanges, reforçadores ou cavernas estes elementos flambados ainda oferecem resistência ao carregamento.\nNeste estado, os elementos reforçadores sofrem então cargas adicionais, de modo a acomodar a flambagem da alma.\n\n\n\n\nVigaRevestimentoRevestimentoAnalogia"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-pura-teoria-de-wagner",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tração diagonal pura: Teoria de Wagner",
-    "text": "Tração diagonal pura: Teoria de Wagner\n\n\nEm um estado de tração diagonal pura, consideramos uma total perda de capacidade resistiva da alma perpendicular às meias ondas de flambagem (diagonal secundária).\nConsideramos um caso idealizado, onde as flanges suportam todo o carregamento de flexão enquanto alma suporta os esforços cisalhantes.\nSob estas considerações, com carga pontual \\(W\\) uma tensão de cisalhamento \\(\\tau\\) uniforme se distribui sobre a alma de espessura \\(t\\) e contida entre flanges espaçadas em \\(d\\).\n\\[\n\\tau = \\frac{W}{t d}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: tensão de tração diagonal",
-    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nPara entender a redistribuição de tensões em um caso de tração diagonal pura vamos observar um pequeno elemento ABCD da alma, no qual identificamos a tensão de tração diagonal \\(\\sigma_t\\) orientada a um ângulo de tração diagonal \\(\\alpha\\) na alma.\nA partir de um equilíbrio de forças verticais, a tensão \\(\\sigma_t\\) pode ser calculada em função da tensão de cisalhamento presente na alma.\n\\[\n\\sigma_t = \\frac{\\tau}{\\sin{\\alpha} \\cos{\\alpha}}\n\\]\nAplicação a relação para a tensão de cilhamento podemos obter a tensão de tração diagonal em função do carregamento externo \\(W\\). \\[\n\\sigma_t = \\frac{2 W}{t d \\sin{2 \\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-tensão-de-tração-diagonal-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: tensão de tração diagonal",
-    "text": "Teoria de Wagner: tensão de tração diagonal\n\n\nA partir da definição da tensão de tração diagonal, podemos identificar tensões \\(\\sigma_z\\) na horizontal e \\(\\sigma_y\\) na vertical, mantendo o equilíbrio no elemento ABCD.\nEstas tensões de equilíbrio serão comunicadas aos elementos reforçadores adjacentes.\nConsiderando uma tensão \\(\\sigma_z\\) no elemento seccionado verticalmente, podemos calcular seu valor em função da tensão de cisalhamento ou do carregamento externo diretamente.\n\\[\n\\sigma_z = \\frac{\\tau}{\\tan{\\alpha}} = \\frac{W}{t d \\tan{\\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nas-flanges",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nas flanges",
-    "text": "Teoria de Wagner: cargas primárias nas flanges\n\n\nConsiderando uma tensão \\(\\sigma_z\\) constante ao longo da alma podemos inferir os carregamentos \\(F_T\\) e \\(F_B\\) totais nas flanges a partir do equilíbrio de momentos.\nNota-se que os carregamentos totais nas flanges são então produzidos por uma combinação do momento fletor gerado pelo carregamento externo e do carregamento adicional resultante do estado de tração diagonal puro.\nNa flange superior observamos um incremento no carregamento enquanto na inferior um alívio do carregamento.\n\\[\nF_T = \\frac{W z}{d} + \\frac{W}{2 \\tan{\\alpha}}\n\\qquad \\text{e} \\qquad\nF_B = \\frac{W z}{d} - \\frac{W}{2 \\tan{\\alpha}}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
-    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nAvaliamos novamente um elemento da alma, agora seccionado horizontalmente, onde a tensão \\(\\sigma_y\\) pode ser obtida em um equilíbrio de forças vertical.\n\\[\n\\sigma_y = \\tau \\tan{\\alpha} = \\frac{W \\tan{\\alpha}}{t d}\n\\]\nPodemos assumir que cada reforçador vertical deve suportar uma carga compressiva \\(P\\) equilibrando a resultante das tensões \\(\\sigma_y\\) atuantes nos painéis da alma adjacentes.\nConsiderando uma tensão \\(\\sigma_y\\) constante na alma e que cada reforçador suporte metade de seus painéis adjacentes temos a seguinte relação:\n\\[\nP = \\frac{W b \\tan{\\alpha}}{d}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-primárias-nos-reforçadores-verticais-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas primárias nos reforçadores verticais",
-    "text": "Teoria de Wagner: cargas primárias nos reforçadores verticais\n\n\nA carga compressiva nos reforçadores, além de ser verificada a escoamento do material, pode também causar a flabagem destes elementos.\nNo entanto, a interação da flambagem da alma com a flambagem do reforçador torna necessário um ajuste sobre o seu comprimento efetivo.\n\\[\nl_e =\n\\begin{cases}\n\\dfrac{d}{\\sqrt{4-2b/d}},\n& \\text{para } b \\leq 1{,}5d, \\\\[8pt]\nd,\n& \\text{para } b \\geq 1{,}5d.\n\\end{cases}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-cargas-secundárias-nas-flanges",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: cargas secundárias nas flanges",
-    "text": "Teoria de Wagner: cargas secundárias nas flanges\n\n\nAs tensões distribuídas \\(\\sigma_y\\) além de compressão direta nos reforçadores verticais, também produzem flexão nas flanges entre estes reforçadores.\nCada seção de flange atua como uma viga engastada portanto um carregamento uniformemente distribuído de intensidade \\(\\sigma_y t\\).\nNestas condições, um momento máximo na flange pode ser determinado nos arredores dos reforçadores verticais.\n\\[\nM_{max} = \\frac{\\sigma_y t b^2}{12} = \\frac{W b^2 \\tan{\\alpha}}{12 d}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: ângulo de tração diagonal",
-    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nO ângulo de tração diagonal \\(\\alpha\\) se ajusta de modo a minimizar a energia de deformação da estrutura.\nQuando as flanges e reforçadores verticais são idealmente rígidos quando comparados à alma, a energia de deformaçaõ se deve apenas à lama resultando em um ângulo de 45º.\nPara estruturas reais, considerando elementos fabricados em um mesmo material, podemos aproximar o ângulo a partir da seguinte relação:\n\\[\n\\tan^2{\\alpha} = \\frac{\\sigma_t + \\sigma_F}{\\sigma_t + \\sigma_S}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#teoria-de-wagner-ângulo-de-tração-diagonal-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Teoria de Wagner: ângulo de tração diagonal",
-    "text": "Teoria de Wagner: ângulo de tração diagonal\n\n\nAs tensões \\(\\sigma_F\\) e \\(\\sigma_S\\) correspondem respectivamente aos adicionais de tensão diretas na flange e reforçadores devido ao estado de tração diagonal pura.\n\\[\n\\sigma_F = \\frac{W}{2 A_F \\tan{\\alpha}} \\qquad \\text{e} \\qquad \\sigma_S = \\frac{W b\\tan{\\alpha}}{A_S d}\n\\]\nDeste modo, podemos obter uma relação para o ângulo de tração diagonal puramente geométrica.\n\\[\n\\tan^4{\\alpha} = \\frac{1 + t d / 2 A_F}{1 + tb/A_S}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-incompleta",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tração-diagonal-incompleta",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tração diagonal incompleta",
-    "text": "Tração diagonal incompleta\n\n\n01 · Introdução\n\n\n02 · Tração diagonal pura\n\n\n03 · Tração diagonal incompleta"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal",
-    "href": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Fator de tração diagonal",
-    "text": "Fator de tração diagonal\n\n\nConsideramos que o [cisalhamento presente na alma pode ser dividido em duas parcelas]: um cisalhamento verdadeiro \\(\\tau\\) e um cisalhamento devido à tração diagonal \\(\\tau_{DT}\\).\nO fator de tração diagonal \\(k\\) define a proporção em que o cisalhamento se divide para as duas parcelas definidas anteriormente.\nO valor de \\(k\\) varia entre \\(k\\) = 0 para uma placa não flambada e \\(k\\) = 1 para um estado de tração diagonal pura.\nNa região intermediária seu valor pode ser obtido através da seguinte relação empírica a qual depende da razão de carregamento \\(\\tau/\\tau_{CR}\\).\n\n\n\n\\[\n\\tau = \\tau_s + \\tau_{DT}\n\\]\n\n\n\n\n\\[\n\\tau_s = (1 - k) \\tau \\qquad \\text{e} \\qquad \\tau_{DT} = k \\tau\n\\]\n\n\n\n\n\\[\nk = \\tanh{0.5 \\log_{10}{\\frac{\\tau}{\\tau_{cr}}}}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tensões críticas de flambagem",
-    "text": "Tensões críticas de flambagem\n\n\nNa razão de carregamento, a tensão de cisalhamento atuante é dividida pela tensão crítica de flambagem da placa.\nEssa tensão crítica depende das restrições nas bordas impostas pelos reforçadores (\\(R_h\\)) e pelas flanges (\\(R_d\\)), além do coeficiente de flambagem \\(k_{ss}\\).\nOs termos \\(R_h\\) e \\(R_d\\) são valores empíricos descritos em função das razões entre as espessuras da flange e da alma (\\(t_F/t\\)) e do reforçador e da alma (\\(t_U/t\\)).\nPara valores de tensão acima do limite de escoamento do material, devem ser utilizadas correções plásticas, conforme os ábacos a seguir.\n\n\n\n\n\n\n\n\n\n\n\\[\n\\tau_{cr,\\mathrm{elastic}}\n=\nk_{ss}E\n\\left(\\frac{t}{b}\\right)^2\n\\left[\nR_h\n+\n\\frac{1}{2}(R_d-R_h)\n\\left(\\frac{d}{h}\\right)^3\n\\right]\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Fator de tração diagonal",
-    "text": "Fator de tração diagonal"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal-2",
-    "href": "lectures/incomplete_diagonal_tension/index.html#fator-de-tração-diagonal-2",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Fator de tração diagonal",
-    "text": "Fator de tração diagonal"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões\n\n\nA partir do fator \\(k\\) e do ângulo de tração diagonal \\(\\alpha\\), podemos calcular as tensões que surgem após a flambagem na direção de \\(\\alpha\\) (\\(\\sigma_1\\)) e na direção perpendicular a ela (\\(\\sigma_2\\)).\n\\[\n\\sigma_1\n=\n\\frac{2k\\tau}{\\sin 2\\alpha}\n+\n\\tau(1-k)\\sin 2\\alpha\n\\]\n\n\n\\[\n\\sigma_2\n=\n-\\tau(1-k)\\sin 2\\alpha\n\\]\nQuando \\(k\\) se aproxima de 1, recuperamos as relações para a tração diagonal pura."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões\nAo contrário do que observamos na tração diagonal completa, as relações para o ângulo de tração diagonal e para as tensões nos componentes (\\(\\sigma_F\\) e \\(\\sigma_U\\)) são acopladas e devem ser resolvidas iterativamente.\n1. Assume-se um valor inicial de \\(\\alpha\\), utilizado para calcular as tensões \\(\\sigma_F\\), \\(\\sigma_U\\), \\(\\sigma_1\\) e \\(\\sigma_2\\).\n2. A partir dessas tensões, calculam-se as deformações \\(\\varepsilon_F\\), \\(\\varepsilon_U\\) e \\(\\varepsilon\\).\n3. Os valores das deformações são utilizados para atualizar \\(\\alpha\\), repetindo-se o processo até a convergência.\nQuando a rigidez das flanges é significativamente maior que a da alma, \\(\\varepsilon_F\\) é pouco significativa em comparação com \\(\\varepsilon\\). Nesse caso, o processo iterativo pode ser evitado, e as tensões nos reforçadores verticais podem ser calculadas diretamente pelo ábaco a seguir."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-2",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-2",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-3",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-3",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões\nA partir da tensão nos reforçadores verticais, podemos obter também, diretamente, o ângulo de tração diagonal \\(\\alpha\\)."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-4",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-4",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-5",
-    "href": "lectures/incomplete_diagonal_tension/index.html#análise-de-tensões-5",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Análise de tensões",
-    "text": "Análise de tensões\nA partir da tensão nos reforçadores verticais, podemos obter também, diretamente, o ângulo de tração diagonal \\(\\alpha\\)."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\n\n\nO fator de correção \\(C_2\\) pode ser obtido graficamente em função do parâmetro \\(\\omega d\\), calculado conforme indicado no gráfico.\nOs termos \\(I_T\\) e \\(I_C\\) representam, respectivamente, os momentos de inércia das flanges sob tração e sob compressão.\n\\[\n\\omega d\n=\n0.7b\n\\sqrt[4]{\n\\frac{t}{(I_C+I_T)d_e}\n}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\nAs tensões máximas calculadas devem ser comparadas com os valores admissíveis, conforme mostrado nos gráficos abaixo para os alumínios das classes 24S e 75S.\nObservamos para este caso que os valores admissíveis não são dependentes apenas do material, mas também do estado de deformação."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-2",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-2",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\nFalha dos reforçadores verticais\nAo analisarmos os reforçadores verticais, podemos observar alguns modos de falha distintos: falha como coluna, falha local e falha local forçada.\nNa falha como coluna, ao se iniciar a flambagem do reforçador, calculada pela equação de Euler, as tensões na alma desenvolvem uma força restauradora que se opõe à deflexão. Esse efeito pode ser incluído na análise de flambagem por meio da modificação do comprimento efetivo (\\(L_e\\)) da coluna, conforme a seguinte relação:\n\\[\nL_e\n=\n\\frac{d_U}\n{\\sqrt{\n1+k^2\\left(3-2\\frac{b}{d_U}\\right)\n}}\n\\qquad\n(b&lt;1.5d)\n\\]\nO comprimento do reforçador \\(d_U\\) deve ser medido entre os centroides das linhas de rebites que o conectam às flanges."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-3",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-3",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\n\n\nA falha local das seções dos reforçadores normalmente não é dominante na análise desses elementos, mas seu efeito combinado com a falha como coluna pode ser investigado por meio da equação de Johnson–Euler.\nAs ondas de flambagem da alma podem forçar a flambagem dos reforçadores, principalmente quando estes apresentam pequena espessura na região de conexão, caracterizando a chamada falha local forçada.\nEsse tipo de falha, aplicável a reforçadores simples ou simétricos, normalmente constitui o modo dominante no projeto desses elementos."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-4",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-4",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\n\n\nPara reforçadores duplos, as seguintes relações podem ser utilizadas para estimar as tensões admissíveis para a falha local forçada.\nCorreções plásticas podem ser aplicadas a partir da razão entre o módulo secante e o módulo de elasticidade.\n\\[\n\\sigma_o\n=\n21k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]\n\n\n\nPara reforçadores simples, podem ser utilizadas estimativas diferentes.\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n32.5k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-5",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-5",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\n\n\nDevido ao caráter local desse tipo de falha, não devemos comparar as tensões admissíveis com as tensões \\(\\sigma_U\\), que representam valores médios ao longo do reforçador.\nA comparação deve ser feita com os valores máximos dessas tensões, que podem ser obtidos graficamente."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-6",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-6",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\nFalha nas flanges\nA partir do conjunto de tensões presentes, podem ser avaliados os modos de falha clássicos desses elementos:\n\nFlambagem como coluna.\nFalha local e sua interação com a flambagem como coluna.\nFalha por cisalhamento ou por ruptura do material."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-7",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-7",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha",
-    "text": "Modos de falha\nFalha nas flanges\nA partir do conjunto de tensões presentes, podem ser avaliados os modos de falha clássicos desses elementos:\n\nFlambagem como coluna.\nFalha local e sua interação com a flambagem como coluna.\nFalha por cisalhamento ou por ruptura do material."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-críticas-de-flambagem-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tensões críticas de flambagem",
-    "text": "Tensões críticas de flambagem"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#correção-plástica",
-    "href": "lectures/incomplete_diagonal_tension/index.html#correção-plástica",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Correção plástica",
-    "text": "Correção plástica"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#coeficiente-de-flambagem-e-fatores-de-restrição",
-    "href": "lectures/incomplete_diagonal_tension/index.html#coeficiente-de-flambagem-e-fatores-de-restrição",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Coeficiente de flambagem e fatores de restrição",
-    "text": "Coeficiente de flambagem e fatores de restrição"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-nos-reforçadores-verticais",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-nos-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tensões nos reforçadores verticais",
-    "text": "Tensões nos reforçadores verticais\n\n\nAssim como na tração diagonal pura, essas tensões devem ser decompostas nas direções vertical e horizontal para o cálculo de seus efeitos nas flanges e nos reforçadores.\nComo a alma ainda suporta tensões de compressão, podemos considerar uma largura efetiva que contribui para a resistência dos reforçadores verticais.\nIncluindo essa contribuição da alma e considerando uma área efetiva dos reforçadores, que incorpora os efeitos de excentricidade, podemos calcular a tensão média nos reforçadores (\\(\\sigma_U\\)) pela relação ao lado.\n\n\n\n\\[\n\\frac{b_e}{b}\n=\n0.5(1-k)\n\\]\n\n\n\n\n\\[\n\\sigma_U\n=\n-\\frac{k\\tau\\tan\\alpha}\n{\\dfrac{A_u}{dt}+0.5(1-k)}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#tensões-nas-flanges",
-    "href": "lectures/incomplete_diagonal_tension/index.html#tensões-nas-flanges",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Tensões nas flanges",
-    "text": "Tensões nas flanges\n\n\nAnalogamente, uma [tensão adicional nas flanges]{,focus} pode ser calculada pela seguinte relação:\n\\[\n\\sigma_F\n=\n-\\frac{k\\tau\\cot\\alpha}\n{\\dfrac{2A_F}{ht}+0.5(1-k)}\n\\]\nPara calcular o ângulo de tração diagonal, devemos novamente encontrar o valor que minimiza a energia de deformação da estrutura.\nPara placas planas, os valores de \\(\\alpha\\) normalmente se encontram entre \\(38^\\circ\\) e \\(45^\\circ\\).\n\n\n\n\\[\n\\tan^2\\alpha\n=\n\\frac{\\varepsilon-\\varepsilon_F}\n{\\varepsilon-\\varepsilon_U}\n\\]\n\n\n\\[\n\\varepsilon_F = \\frac{\\sigma_F}{E}\n\\qquad\n\\varepsilon_U = \\frac{\\sigma_U}{E}\n\\]\n\n\n\\[\n\\varepsilon\n=\n\\frac{1}{E}(\\sigma_1-\\mu\\sigma_2)\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Ruptura da alma",
-    "text": "Modos de falha: Ruptura da alma\nApós a análise das tensões no estado de tração diagonal e a determinação de \\(k\\) e \\(\\alpha\\), podemos utilizar essas informações para avaliar a falha dos componentes individuais.\nPara cargas elevadas após a flambagem, a alma pode falhar por ruptura do material ao atingir uma tensão de cisalhamento máxima \\(\\tau'_{\\max}\\), definida em função de uma correção \\(C_1\\) para o ângulo \\(\\alpha\\) e de uma correção \\(C_2\\) para a concentração de tensões.\n\n\n\\[\n\\tau'_{\\max}\n=\n\\tau(1+k^2C_1)(1+kC_2)\n\\]\n\n\n\\[\nC_1\n=\n\\frac{1}{\\sin 2\\alpha}-1\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Ruptura da alma",
-    "text": "Modos de falha: Ruptura da alma\n\n\nO fator de correção \\(C_2\\) pode ser obtido graficamente em função do parâmetro \\(\\omega d\\), calculado conforme indicado no gráfico.\nOs termos \\(I_T\\) e \\(I_C\\) representam, respectivamente, os momentos de inércia das flanges sob tração e sob compressão.\n\\[\n\\omega d\n=\n0.7b\n\\sqrt[4]{\n\\frac{t}{(I_C+I_T)d_e}\n}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-2",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-ruptura-da-alma-2",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Ruptura da alma",
-    "text": "Modos de falha: Ruptura da alma\nAs tensões máximas calculadas devem ser comparadas com os valores admissíveis, conforme mostrado nos gráficos abaixo para os alumínios das classes 24S e 75S.\nObservamos para este caso que os valores admissíveis não são dependentes apenas do material, mas também do estado de deformação."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Falha dos reforçadores verticais",
-    "text": "Modos de falha: Falha dos reforçadores verticais\nAo analisarmos os reforçadores verticais, podemos observar alguns modos de falha distintos: falha como coluna, falha local e falha local forçada.\nNa falha como coluna, ao se iniciar a flambagem do reforçador, calculada pela equação de Euler, as tensões na alma desenvolvem uma força restauradora que se opõe à deflexão. Esse efeito pode ser incluído na análise de flambagem por meio da modificação do comprimento efetivo (\\(L_e\\)) da coluna, conforme a seguinte relação:\n\\[\nL_e\n=\n\\frac{d_U}\n{\\sqrt{\n1+k^2\\left(3-2\\frac{d}{h_U}\\right)\n}}\n\\qquad\n(d&lt;1.5h_U)\n\\]\nO comprimento do reforçador \\(d_U\\) deve ser medido entre os centroides das linhas de rebites que o conectam às flanges."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais-1",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-dos-reforçadores-verticais-1",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Falha dos reforçadores verticais",
-    "text": "Modos de falha: Falha dos reforçadores verticais\n\n\nA falha local das seções dos reforçadores normalmente não é dominante na análise desses elementos, mas seu efeito combinado com a falha como coluna pode ser investigado por meio da equação de Johnson–Euler.\nAs ondas de flambagem da alma podem forçar a flambagem dos reforçadores, principalmente quando estes apresentam pequena espessura na região de conexão, caracterizando a chamada falha local forçada.\nEsse tipo de falha, aplicável a reforçadores simples ou simétricos, normalmente constitui o modo dominante no projeto desses elementos."
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-local-forçada",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-falha-local-forçada",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Falha local forçada",
-    "text": "Modos de falha: Falha local forçada\n\n\nPara reforçadores duplos, as seguintes relações podem ser utilizadas para estimar as tensões admissíveis para a falha local forçada.\n\\[\n\\sigma_o\n=\n21k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]\n\n\n\nPara reforçadores simples, podem ser utilizadas estimativas diferentes.\n\n\n\\[\n\\sigma_o\n=\n26k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(24S-T3)}\n\\]\n\n\n\\[\n\\sigma_o\n=\n32.5k^{2/3}\n\\left(\\frac{t_U}{t}\\right)^{1/3}\n\\ \\text{ksi}\n\\qquad\n\\text{(75S-T6)}\n\\]"
-  },
-  {
-    "objectID": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-tensão-máxima-nos-reforçadores",
-    "href": "lectures/incomplete_diagonal_tension/index.html#modos-de-falha-tensão-máxima-nos-reforçadores",
-    "title": "Teoria das Estruturas Aeroespaciais II",
-    "section": "Modos de falha: Tensão máxima nos reforçadores",
-    "text": "Modos de falha: Tensão máxima nos reforçadores\n\n\nDevido ao caráter local desse tipo de falha, não devemos comparar as tensões admissíveis com as tensões \\(\\sigma_U\\), que representam valores médios ao longo do reforçador.\nA comparação deve ser feita com os valores máximos dessas tensões, que podem ser obtidos graficamente.\nPara análise das flanges apenas os modos clássicos para estes elementos podem ser avaliadas como a Flambagem como coluna, Falha local (e interação entre elas) e falhas por cisalhamento ou ruptura do material utilizado."
   }
 ]
